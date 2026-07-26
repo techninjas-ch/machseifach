@@ -18,14 +18,11 @@ export default function KontaktPage() {
 
       <div className="mt-10 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-6 sm:p-8">
         <a
-          href="mailto:hallo@machseifach-podcast.ch"
+          href="mailto:info@machseifa.ch"
           className="text-lg font-semibold text-[var(--accent)] hover:text-[var(--accent-dark)]"
         >
-          hallo@machseifach-podcast.ch
+          info@machseifa.ch
         </a>
-        <p className="mt-2 text-sm text-[var(--muted-2)]">
-          Platzhalter-Adresse, bitte durch echte E-Mail ersetzen.
-        </p>
 
         <hr className="my-6 border-[var(--accent-soft)]/12" />
 

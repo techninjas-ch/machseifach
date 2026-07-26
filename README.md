@@ -9,7 +9,7 @@ Erste Next.js-Version der Website für den Podcast "Mach's eifach".
 - `/ueber-uns` – Über den Podcast und die Hosts
 - `/kontakt` – Kontakt-E-Mail
 
-Plattform-Links (Spotify, Apple Podcasts, YouTube, Instagram) sind echt (`src/lib/platforms.ts`). Kontakt-E-Mail ist noch **Platzhalter** – bitte vor dem echten Launch ersetzen (`src/app/kontakt/page.tsx`).
+Plattform-Links (Spotify, Apple Podcasts, YouTube, Instagram) sind echt (`src/lib/platforms.ts`), Kontakt-E-Mail ebenfalls (`src/app/kontakt/page.tsx`).
 
 ## Lokal starten
 

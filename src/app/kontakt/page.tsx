@@ -24,7 +24,7 @@ export default function KontaktPage() {
           hallo@machseifach-podcast.ch
         </a>
         <p className="mt-2 text-sm text-[var(--muted-2)]">
-          Platzhalter-Adresse – bitte durch echte E-Mail ersetzen.
+          Platzhalter-Adresse, bitte durch echte E-Mail ersetzen.
         </p>
 
         <hr className="my-6 border-[var(--accent-soft)]/12" />

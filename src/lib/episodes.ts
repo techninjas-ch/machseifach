@@ -14,7 +14,7 @@ export const episodes: Episode[] = [
     date: "2026-07-22",
     duration: "56 Min",
     description:
-      "Christian Rüegg (StaySafe) erzählt von seinem Weg vom Koch über die Gastronomie und Sicherheitsbranche bis zum eigenen Unternehmen – über faire Preise, echte Beziehungen statt Social-Media-Zahlen und warum man sich nicht unter Wert verkaufen sollte.",
+      "Christian Rüegg (StaySafe) erzählt von seinem Weg vom Koch über die Gastronomie und Sicherheitsbranche bis zum eigenen Unternehmen: über faire Preise, echte Beziehungen statt Social-Media-Zahlen und warum man sich nicht unter Wert verkaufen sollte.",
     spotifyUrl: "https://open.spotify.com/episode/0aKu743uCs7ZCl7U0yDcy6",
   },
   {
@@ -32,7 +32,7 @@ export const episodes: Episode[] = [
     date: "2026-07-08",
     duration: "32 Min",
     description:
-      "Mirjams Weg vom Sportgymnasium über das Lebensmitteltechnologie-Studium und einen Sprachaufenthalt in Australien bis zur Selbstständigkeit – inklusive der ersten finanziellen Lektionen und wie sie ihre Leidenschaft gefunden hat.",
+      "Mirjams Weg vom Sportgymnasium über das Lebensmitteltechnologie-Studium und einen Sprachaufenthalt in Australien bis zur Selbstständigkeit, inklusive der ersten finanziellen Lektionen und wie sie ihre Leidenschaft gefunden hat.",
     spotifyUrl: "https://open.spotify.com/episode/6wkBrWFlVmWsi60fvaeqyV",
   },
 ];

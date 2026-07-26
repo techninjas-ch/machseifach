@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Über uns – Mach's eifach",
   description:
-    "Lerne Mirjam und Patrick kennen – die Menschen hinter dem Podcast Mach's eifach.",
+    "Lerne Mirjam und Patrick kennen, die Menschen hinter dem Podcast Mach's eifach.",
 };
 
 const LINKEDIN_MIRJAM = "https://www.linkedin.com/in/mirjam-g%C3%A4mperli/";
@@ -19,16 +19,16 @@ const linkClass =
 const hosts = [
   {
     name: "Mirjam",
-    responsibility: "Projektführung, Details & Kommunikation",
+    responsibility: "Struktur, Details & die guten Fragen",
     image: "/mirjam.png",
     imageClass: "object-contain translate-x-2",
     imageWrapperClass: "bg-black/5",
     paragraphs: [
-      "Mirjam sorgt dafür, dass Projekte strukturiert und angenehm ablaufen. Sie behält den Überblick, hört genau hin und achtet auf die Details, die am Ende den Unterschied machen.",
-      "Durch ihre Erfahrung im Projektmanagement und in der Leitung eines Technikteams weiss sie, wo Projekte ins Stocken geraten können und wie sich Abläufe einfacher und klarer gestalten lassen.",
+      "Mirjam hat ihren eigenen Weg genommen: vom Sportgymnasium über ein Lebensmitteltechnologie-Studium bis zu einem Sprachaufenthalt in Australien, bevor sie den Schritt in die Selbstständigkeit gewagt hat.",
+      "Durch ihre Erfahrung im Projektmanagement und in der Leitung eines Technikteams weiss sie, was es braucht, damit aus einer Idee auch wirklich etwas wird. Genau diesen Blick bringt sie auch in den Podcast ein.",
     ],
     highlight:
-      "Kein Chaos. Keine komplizierten Prozesse. Sondern eine Zusammenarbeit, bei der man sich gut aufgehoben fühlt.",
+      "Kein ewiges Abwägen. Sondern der Mut, den eigenen Weg einfach zu gehen.",
     personalNote:
       "Abseits vom Podcast findet man Mirjam oft auf dem Tennisplatz, auf Reisen oder draussen in der Natur.",
     links: [
@@ -38,18 +38,18 @@ const hosts = [
   },
   {
     name: "Patrick",
-    responsibility: "Technik & Entwicklung",
+    responsibility: "Technik & Umsetzung",
     image: "/patrick.jpg",
     imageClass: "object-cover",
     imageWrapperClass: "",
     paragraphs: [
-      "Patrick entwickelt die technischen Lösungen hinter unseren Projekten. Dabei ist ihm wichtig, dass sie nicht nur modern sind, sondern zuverlässig funktionieren, verständlich bleiben und langfristig wartbar sind.",
-      "Über zehn Jahre Erfahrung in der Softwareentwicklung haben ihm gezeigt, dass die beste Lösung nicht automatisch die komplizierteste ist. Er liebt es, Probleme zu analysieren, Abläufe zu automatisieren und aus komplexen Anforderungen einfache Lösungen zu machen.",
+      "Patrick wollte ursprünglich alles andere, als den ganzen Tag vor einem Computer zu sitzen. Über den Umweg als Automatiker landete er schliesslich in der Softwareentwicklung und ist seit über zehn Jahren dabei.",
+      "Der Schritt in die Selbstständigkeit war für ihn die logische Konsequenz: mehr Fokus, weniger Ablenkung und die Freiheit, Dinge auf seine eigene Art anzugehen.",
     ],
     highlight:
-      "Kein unnötiges Over-Engineering. Keine vermeidbaren Abhängigkeiten. Einfach Technik, die funktioniert.",
+      "Kein perfekter Plan. Einfach machen und unterwegs daraus lernen.",
     personalNote:
-      "Wenn Patrick nicht gerade an einer Lösung tüftelt, steht er meistens auf dem Tennisplatz oder arbeitet an einer neuen Podcastfolge.",
+      "Wenn Patrick nicht gerade an einer neuen Podcastfolge arbeitet, steht er meistens auf dem Tennisplatz.",
     links: [
       { href: LINKEDIN_PATRICK, label: "LinkedIn" },
       { href: WEBSITE_PATRICK, label: "patrickchristen.com" },
@@ -68,10 +68,15 @@ export default function UeberUnsPage() {
         Zwei Perspektiven. Ein Podcast.
       </p>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
-        &apos;Mach&apos;s eifach&apos; ist entstanden, weil wir überzeugt sind: die
-        besten Lösungen sind oft die einfachsten. Mirjam und Patrick nehmen in
-        jeder Folge ein Thema auseinander – ohne Fachchinesisch, ohne
-        Komplexität.
+        Mach&apos;s eifach ist der Podcast über Selbstständigkeit, Unternehmertum und
+        ein selbstbestimmtes Leben.
+      </p>
+      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
+        Wir sprechen mit spannenden Persönlichkeiten, die ihren eigenen Weg
+        gehen, Ideen umsetzen und nicht auf den perfekten Moment warten. Dabei
+        geht es um mutige Entscheidungen, ortsunabhängiges Arbeiten,
+        persönliche Erfahrungen und die Realität hinter dem Schritt in die
+        Selbstständigkeit.
       </p>
 
       <div className="mt-12 grid gap-7 lg:grid-cols-2">
@@ -126,9 +131,10 @@ export default function UeberUnsPage() {
         <h2 className="text-2xl font-bold">Warum wir das machen</h2>
         <div className="mt-5 space-y-4 text-[var(--muted)]">
           <p>
-            Wir arbeiten als Team. Patrick bringt die technische Tiefe, Mirjam
-            den Projekt-Flow und das Gespür für das, was wirklich gebraucht wird.
-            Genau diese Kombination wollen wir auch im Podcast teilen.
+            Wir haben beide unterschiedliche Wege in die Selbstständigkeit
+            gefunden, und genau das wollten wir teilen. Nicht die eine
+            perfekte Formel, sondern echte Geschichten, Umwege und die
+            Momente, in denen man sich einfach getraut hat.
           </p>
           <p className="font-semibold text-[var(--foreground)]">
             Kein Alleingang. Keine Einzelkämpfer-Mentalität. Einfach zwei

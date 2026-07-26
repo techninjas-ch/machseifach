@@ -150,7 +150,7 @@ export default function Home() {
             </h2>
             <p className="m-0 mb-6 max-w-[560px] text-[17px] leading-relaxed text-[var(--on-dark-muted)]">
               Mirjam und Patrick teilen ihre eigenen Erfahrungen und die von Gästen, die ihren Weg
-              in die Selbstständigkeit gegangen sind – mit allem, was dazugehört.
+              in die Selbstständigkeit gegangen sind, mit allem, was dazugehört.
             </p>
             <Link
               href="/ueber-uns"

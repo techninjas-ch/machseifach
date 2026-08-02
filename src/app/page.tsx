@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { episodes } from "@/lib/episodes";
 import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms } from "@/lib/platforms";
+import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 
 export default function Home() {
   const latest = episodes.slice(0, 3);
@@ -73,6 +74,8 @@ export default function Home() {
         </div>
       </div>
 
+      <NextEpisodeTeaser />
+
       {/* EPISODES */}
       <div id="episoden" className="mx-auto max-w-5xl px-6 py-24">
         <div className="mb-14 text-center">
@@ -92,18 +95,20 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <div className="mb-1.5 text-[13px] text-[var(--muted-2)]">{ep.duration}</div>
-                <h3 className="m-0 mb-2 text-xl font-bold">{ep.title}</h3>
+                <h3 className="m-0 mb-2 text-xl font-bold">
+                  <Link href={`/episoden/${ep.slug}`} className="hover:text-[var(--accent)]">
+                    {ep.title}
+                  </Link>
+                </h3>
                 <p className="m-0 mb-3.5 text-[15px] leading-relaxed text-[var(--muted)]">
                   {ep.description}
                 </p>
-                <a
-                  href={ep.spotifyUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  href={`/episoden/${ep.slug}`}
                   className="text-sm font-semibold text-[var(--accent)] hover:text-[var(--accent-dark)]"
                 >
-                  Anhören →
-                </a>
+                  Mehr erfahren →
+                </Link>
               </div>
             </div>
           ))}

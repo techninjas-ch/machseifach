@@ -9,3 +9,8 @@ export const platforms = [
   { label: "Apple Podcasts", href: APPLE_URL },
   { label: "YouTube", href: YOUTUBE_URL },
 ];
+
+export function spotifyEmbedUrl(episodeUrl: string): string {
+  const id = episodeUrl.split("/episode/")[1]?.split(/[?#]/)[0];
+  return `https://open.spotify.com/embed/episode/${id}?utm_source=generator`;
+}

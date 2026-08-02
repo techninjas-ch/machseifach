@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { episodes } from "@/lib/episodes";
+import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 
 export const metadata: Metadata = {
   title: "Episoden – Mach's eifach",
@@ -13,6 +15,10 @@ export default function EpisodenPage() {
           Alle Folgen
         </div>
         <h1 className="mt-1.5 text-[38px] font-bold">Episoden</h1>
+      </div>
+
+      <div className="-mx-6 mb-14">
+        <NextEpisodeTeaser />
       </div>
 
       <div className="flex flex-col gap-7">
@@ -33,18 +39,20 @@ export default function EpisodenPage() {
                 })}{" "}
                 · {ep.duration}
               </p>
-              <h2 className="m-0 mb-2 text-xl font-bold">{ep.title}</h2>
+              <h2 className="m-0 mb-2 text-xl font-bold">
+                <Link href={`/episoden/${ep.slug}`} className="hover:text-[var(--accent)]">
+                  {ep.title}
+                </Link>
+              </h2>
               <p className="m-0 mb-3.5 text-[15px] leading-relaxed text-[var(--muted)]">
                 {ep.description}
               </p>
-              <a
-                href={ep.spotifyUrl}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href={`/episoden/${ep.slug}`}
                 className="text-sm font-semibold text-[var(--accent)] hover:text-[var(--accent-dark)]"
               >
-                Anhören →
-              </a>
+                Mehr erfahren →
+              </Link>
             </div>
           </article>
         ))}

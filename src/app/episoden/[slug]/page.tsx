@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { episodes } from "@/lib/episodes";
+import { episodes, isPublished } from "@/lib/episodes";
 import { spotifyEmbedUrl } from "@/lib/platforms";
+import { buildShownotesHtml } from "@/lib/shownotes";
+import ShareButton from "@/components/ShareButton";
+import CopyShownotesButton from "@/components/CopyShownotesButton";
+
+// Episodes can carry a future `publishAt`; re-check on every request so the
+// gate actually flips at the right time instead of freezing at build time.
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
-  return episodes.map((ep) => ({ slug: ep.slug }));
+  return episodes.filter(isPublished).map((ep) => ({ slug: ep.slug }));
 }
 
 function findEpisode(slug: string) {
@@ -19,7 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const episode = findEpisode(slug);
-  if (!episode) return {};
+  if (!episode || !isPublished(episode)) return {};
   return {
     title: `${episode.title} – Mach's eifach`,
     description: episode.description,
@@ -33,7 +40,7 @@ export default async function EpisodeDetailPage({
 }) {
   const { slug } = await params;
   const episode = findEpisode(slug);
-  if (!episode) notFound();
+  if (!episode || !isPublished(episode)) notFound();
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
@@ -64,32 +71,48 @@ export default async function EpisodeDetailPage({
         {episode.description}
       </p>
 
-      <div className="mt-8 overflow-hidden rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)]">
-        <iframe
-          src={spotifyEmbedUrl(episode.spotifyUrl)}
-          width="100%"
-          height="232"
-          style={{ border: 0 }}
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        />
-      </div>
+      {episode.spotifyUrl ? (
+        <div className="mt-8 overflow-hidden rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)]">
+          <iframe
+            src={spotifyEmbedUrl(episode.spotifyUrl)}
+            width="100%"
+            height="232"
+            style={{ border: 0 }}
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        <div className="mt-8 rounded-[20px] border border-dashed border-[var(--accent-soft)]/30 bg-[var(--surface)] p-6 text-sm text-[var(--muted-2)]">
+          Diese Folge ist noch in der Produktion und erscheint am{" "}
+          {new Date(episode.date).toLocaleDateString("de-CH", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          })}{" "}
+          auf Spotify.
+        </div>
+      )}
 
       <div className="mt-8 flex flex-wrap gap-3.5">
-        <a
-          href={episode.spotifyUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-[var(--accent)] px-6 py-3.5 text-[15px] font-semibold text-[var(--background)] transition-colors hover:bg-[var(--accent-dark)]"
-        >
-          Auf Spotify anhören
-        </a>
+        {episode.spotifyUrl && (
+          <a
+            href={episode.spotifyUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-[var(--accent)] px-6 py-3.5 text-[15px] font-semibold text-[var(--background)] transition-colors hover:bg-[var(--accent-dark)]"
+          >
+            Auf Spotify anhören
+          </a>
+        )}
         <Link
           href="/ueber-uns"
           className="rounded-full border-[1.5px] border-[var(--accent)] px-6 py-3.5 text-[15px] font-semibold text-[var(--accent)] transition-colors hover:bg-[var(--accent)]/5"
         >
           Mehr über die Hosts
         </Link>
+        <ShareButton title={episode.title} />
+        <CopyShownotesButton html={buildShownotesHtml(episode)} />
       </div>
 
       {episode.host && (

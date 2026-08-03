@@ -17,19 +17,61 @@ export type Episode = {
   date: string;
   duration: string;
   description: string;
-  spotifyUrl: string;
+  spotifyUrl?: string;
   guest?: Guest;
   host?: HostLinks;
   summary?: string[];
   tips?: string[];
+  /** ISO datetime (with timezone offset) before which this episode stays hidden site-wide. */
+  publishAt?: string;
 };
+
+export function isPublished(episode: Episode): boolean {
+  if (!episode.publishAt) return true;
+  return Date.now() >= new Date(episode.publishAt).getTime();
+}
 
 export const nextEpisode = {
   guestName: "Michael Rohrer",
-  date: "2026-08-05",
+  date: "2026-08-05T15:15:00+02:00",
 };
 
 export const episodes: Episode[] = [
+  {
+    number: 5,
+    slug: "5-michael-rohrer-schwingsport-selbststaendigkeit",
+    title:
+      "Warte nicht auf 100 % Sicherheit: Michael Rohrer über Schwingsport und den Sprung in die Vollzeit-Selbstständigkeit",
+    date: "2026-08-05",
+    duration: "1 Std 28 Min",
+    publishAt: "2026-08-05T15:15:00+02:00",
+    description:
+      "Michael Rohrer war jahrelang Schreiner, Chauffeur und Fitnesstrainer, bevor er sich als Athletiktrainer für Schwinger, Ringer und Judokas selbstständig machte. Über den Schwingsport, den schrittweisen Sprung in die Vollzeit-Selbstständigkeit und warum man nie auf die perfekte Sicherheit warten sollte.",
+    guest: {
+      name: "Michael Rohrer",
+      role: "Athletiktrainer, Limitless Athletes",
+      bio: "Michael ist in einem Bergdorf in Obwalden aufgewachsen und schwingt seit seinem zehnten Lebensjahr. Nach Lehren als Schreiner und einer Zeit als Chauffeur liess er sich zum Fitnesstrainer ausbilden und machte sich schrittweise selbstständig. Heute betreut er als Athletiktrainer Schwinger, Ringer und Judokas.",
+      links: [
+        { label: "limitless-athletes.ch", href: "https://www.limitless-athletes.ch/" },
+        {
+          label: "Instagram",
+          href: "https://www.instagram.com/limitless_athletes_by_michael/",
+        },
+        { label: "YouTube", href: "https://www.youtube.com/@Michl97" },
+      ],
+    },
+    summary: [
+      "Michael ist in einem kleinen Bergdorf in Obwalden aufgewachsen und schwingt seit seinem zehnten Lebensjahr, nachdem er den Eidgenössischen Schwingertag im Fernsehen gesehen hatte. Als Jungschwinger war er lange erfolglos, bis ihn der neue Partner seiner Mutter fürs Training begeisterte und er mit 16 seinen ersten Kranz gewann.",
+      "Beruflich absolvierte er zunächst eine Schreinerlehre, arbeitete danach als Chauffeur und liess sich parallel zum Fitnesstrainer ausbilden. Im April 2025 wagte er den Sprung zu 20 % Selbstständigkeit neben einer 80-Prozent-Anstellung im Fitnessstudio.",
+      "Über Instagram-Videos, die er zusammen mit einem befreundeten Werbefachmann produzierte, kamen die ersten Kundschaften, darunter Schwinger aus seinem eigenen Klub. Seit Juni 2025 ist er zu 100 % selbstständig als Athletiktrainer für Schwinger, Ringer und Judokas tätig.",
+      "Sein Ziel: ein eigener Standort mit mehreren angestellten Trainern in der Zentralschweiz, und sportlich ein Kranz am Eidgenössischen Schwingfest 2028. Sein wichtigster Rat an alle, die mit der Selbstständigkeit liebäugeln: nicht auf 100 % Sicherheit warten, die kommt sowieso nie.",
+    ],
+    tips: [
+      "Warte nicht auf 100 % Sicherheit, sie wird nie kommen. Irgendwann musst du den Schritt einfach wagen.",
+      "Nutze dein direktes Netzwerk: Michaels erste Kundschaften kamen über Instagram und persönliche Kontakte, nicht über bezahlte Werbung.",
+      "Hol dir Unterstützung, wo sie Sinn ergibt: Michael liess seine Videos von einem befreundeten Werbefachmann produzieren, statt alles allein zu stemmen.",
+    ],
+  },
   {
     number: 4,
     slug: "4-stefan-amport-mit-19-selbststaendig",

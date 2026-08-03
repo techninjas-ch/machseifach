@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { episodes } from "@/lib/episodes";
+import { episodes, isPublished } from "@/lib/episodes";
 import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms } from "@/lib/platforms";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 
+// Episodes can carry a future `publishAt`; re-check on every request so newly
+// published episodes (and the teaser) flip visible at the right time.
+export const dynamic = "force-dynamic";
+
 export default function Home() {
-  const latest = episodes.slice(0, 3);
+  const latest = episodes.filter(isPublished).slice(0, 3);
 
   return (
     <div className="w-full overflow-x-hidden">

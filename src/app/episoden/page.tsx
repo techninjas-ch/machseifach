@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { episodes } from "@/lib/episodes";
+import { episodes, isPublished } from "@/lib/episodes";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 
 export const metadata: Metadata = {
   title: "Episoden – Mach's eifach",
 };
 
+// Episodes can carry a future `publishAt`; re-check on every request so newly
+// published episodes flip visible at the right time.
+export const dynamic = "force-dynamic";
+
 export default function EpisodenPage() {
+  const publishedEpisodes = episodes.filter(isPublished);
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <div className="mb-14 text-center">
@@ -22,7 +28,7 @@ export default function EpisodenPage() {
       </div>
 
       <div className="flex flex-col gap-7">
-        {episodes.map((ep) => (
+        {publishedEpisodes.map((ep) => (
           <article
             key={ep.number}
             className="flex flex-col items-start gap-5 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-7 sm:flex-row"

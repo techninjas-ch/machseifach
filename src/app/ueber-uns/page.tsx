@@ -12,6 +12,8 @@ const WEBSITE_MIRJAM = "https://www.mirjamgaemperli.com/";
 const LINKEDIN_PATRICK =
   "https://www.linkedin.com/in/patrick-christen-b5a52b89/?skipRedirect=true";
 const WEBSITE_PATRICK = "https://patrickchristen.com";
+const WEBSITE_TECHNINJAS = "https://techninjas.ch/";
+const WEBSITE_SPARFUCHS = "https://sparfuchs24.ch/";
 
 const linkClass =
   "text-sm font-semibold text-[var(--accent)] underline decoration-[var(--accent)]/30 underline-offset-4 transition-colors hover:text-[var(--accent-dark)] hover:decoration-[var(--accent-dark)]/40";
@@ -34,6 +36,8 @@ const hosts = [
     links: [
       { href: LINKEDIN_MIRJAM, label: "LinkedIn" },
       { href: WEBSITE_MIRJAM, label: "mirjamgaemperli.com" },
+      { href: WEBSITE_TECHNINJAS, label: "Tech Ninjas" },
+      { href: WEBSITE_SPARFUCHS, label: "Sparfuchs24" },
     ],
   },
   {
@@ -53,6 +57,8 @@ const hosts = [
     links: [
       { href: LINKEDIN_PATRICK, label: "LinkedIn" },
       { href: WEBSITE_PATRICK, label: "patrickchristen.com" },
+      { href: WEBSITE_TECHNINJAS, label: "Tech Ninjas" },
+      { href: WEBSITE_SPARFUCHS, label: "Sparfuchs24" },
     ],
   },
 ] as const;

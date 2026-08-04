@@ -34,6 +34,16 @@ export default function Footer() {
           © {new Date().getFullYear()}{" "}Mach&apos;s eifach Podcast
         </span>
       </div>
+      <div className="mx-auto mt-6 max-w-5xl border-t border-[var(--on-dark-label)]/10 pt-6 text-center">
+        <a
+          href="https://techninjas.ch/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[13px] text-[var(--dark-muted)] transition-colors hover:text-[var(--background)]"
+        >
+          Website von Tech Ninjas
+        </a>
+      </div>
     </footer>
   );
 }

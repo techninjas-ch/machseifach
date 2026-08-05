@@ -45,6 +45,7 @@ export const episodes: Episode[] = [
     date: "2026-08-05",
     duration: "1 Std 28 Min",
     publishAt: "2026-08-05T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/1YymoYD7bTw5ZXaLeqOeM6",
     description:
       "Michael Rohrer war jahrelang Schreiner, Chauffeur und Fitnesstrainer, bevor er sich als Athletiktrainer für Schwinger, Ringer und Judokas selbstständig machte. Über den Schwingsport, den schrittweisen Sprung in die Vollzeit-Selbstständigkeit und warum man nie auf die perfekte Sicherheit warten sollte.",
     guest: {

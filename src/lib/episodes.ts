@@ -103,7 +103,7 @@ export const episodes: Episode[] = [
     },
     summary: [
       "Reto machte 1990 eine Lehre als Bauspengler und später eine Handelsschule, weil er merkte, dass er nicht sein Leben lang aufs Dach wollte. 2009 wechselte er als Projektleiter ins Büro, bei der Kooperation Altnau für ein Holzheizwerk.",
-      "2011 übernahm er die Reinigungsfirma Geschaffung AG, ursprünglich als 50-Prozent-Nebenjob gedacht, nach wenigen Monaten stieg er zu 100 % ein. Die Firma wuchs auf rund 100 Angestellte, mit Gebäudereinigung und -unterhalt für Architekten und Liegenschaften.",
+      "2011 übernahm er die Reinigungsfirma Gschaffig AG, ursprünglich als 50-Prozent-Nebenjob gedacht, nach wenigen Monaten stieg er zu 100 % ein. Die Firma wuchs auf rund 100 Angestellte, mit Gebäudereinigung und -unterhalt für Architekten und Liegenschaften.",
       "2019 geriet er durch die Verantwortung für so viele Mitarbeitende in eine persönliche Krise. Nach vier Hypnosesitzungen entschied er sich für die Via Alpina, eine dreiwöchige Solo-Wanderung quer durch die Schweizer Alpen im Juli 2020, ganz ohne Musik oder Podcasts, nur um sich selbst zuzuhören.",
       "Am 1. März 2022 verkaufte er die Firma an einen langjährigen Mitarbeiter und arbeitete bis Ende 2022 noch zu 80 % für die Übergabe. Persönlich erzählt er offen von einem Schicksalsschlag aus seiner Kindheit: Als Baby verlor er durch einen Tumor sein linkes Auge, was ihn zu dem extrem positiven Menschen gemacht hat, der er heute ist.",
     ],

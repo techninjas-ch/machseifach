@@ -35,9 +35,7 @@ export default function NextEpisodeTeaser() {
           <div className="font-[family-name:var(--font-caveat)] text-xl font-bold text-[var(--accent-soft)]">
             Nächste Folge
           </div>
-          <h3 className="mt-0.5 text-lg font-bold">
-            Zu Gast: {nextEpisode.guestName}
-          </h3>
+          <h3 className="mt-0.5 text-lg font-bold">Zu Gast: ???</h3>
           <p className="mt-1 text-sm text-[var(--muted-2)]">
             {new Date(nextEpisode.date).toLocaleDateString("de-CH", {
               day: "2-digit",

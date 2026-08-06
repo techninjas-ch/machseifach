@@ -28,15 +28,91 @@ export type Episode = {
 
 export function isPublished(episode: Episode): boolean {
   if (!episode.publishAt) return true;
+  // In lokalem `next dev` immer sichtbar, damit wir Folgen vor dem
+  // Release-Zeitpunkt noch anschauen können. Im echten Build/Deploy
+  // (NODE_ENV=production) gilt das Zeit-Gate wie gewohnt.
+  if (process.env.NODE_ENV !== "production") return true;
   return Date.now() >= new Date(episode.publishAt).getTime();
 }
 
 export const nextEpisode = {
-  guestName: "Michael Rohrer",
-  date: "2026-08-05T15:15:00+02:00",
+  guestName: "Reto Wallimann",
+  date: "2026-08-12T15:15:00+02:00",
 };
 
 export const episodes: Episode[] = [
+  {
+    number: 7,
+    slug: "7-reto-wallimann-vom-hobby-zum-beruf",
+    title:
+      "Vom Hobby zum Beruf: Reto Wallimann über Bike-Guiding und Mental-Coaching (Teil 2)",
+    date: "2026-08-19",
+    duration: "1 Std 5 Min",
+    publishAt: "2026-08-19T15:15:00+02:00",
+    description:
+      "Teil 2: Nach dem Verkauf seiner Firma machte Reto Wallimann seine grösste Leidenschaft zum Beruf, als Bike-Guide und Mental-Coach mit Hypnose-Ausbildung. Über den Sprung vom Hobby zum Business, warum 70 bis 90 % im Spitzensport mental entschieden wird und sein Lebensmotto: im schlimmsten Fall wird's eine Erfahrung.",
+    guest: {
+      name: "Reto Wallimann",
+      role: "Bike- & Mental-Coach, mental-bike-trainer.ch",
+      bio: "Reto lebt mit seiner Frau Lucia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
+      links: [
+        { label: "mental-bike-trainer.ch", href: "https://www.mental-bike-trainer.ch/" },
+        { label: "Instagram", href: "https://www.instagram.com/mental.bike.trainer/" },
+        { label: "Facebook", href: "https://www.facebook.com/reto.wallimann" },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/reto-wallimann-b36289108/",
+        },
+      ],
+    },
+    summary: [
+      "Während eines zweimonatigen Sabbaticals mit seiner Frau in den Niederlanden 2023 wurde Reto klar: Was wäre, wenn er seine grösste Leidenschaft, das Biken, zum Beruf machen würde? Kaum zurück in der Schweiz, meldete er sich für die erste Ausbildung zum Swiss Cycling Guide an.",
+      "Heute gibt er Fahrtechnik-Kurse für Mountainbike, Gravel und Rennvelo, von Kindern bis zu 75-Jährigen, und führt jedes Jahr Gruppenreisen nach Südafrika. Parallel dazu bildete er sich über mehrere Jahre zum Mentaltrainer, diplomierten Sportmentaltrainer und schliesslich Hypnose-Therapeuten weiter.",
+      "Aktuell macht er die eidgenössische Berufsprüfung zum Mountainbike-Lehrer und eine weitere Ausbildung zum diplomierten Mental-Coach. Seine Kundschaft: rund 50 % Sport, 30 % privat, 20 % Business, meist über Mundpropaganda statt über Werbung.",
+      "Neustes Projekt: Zusammen mit zwei Kollegen hat er kürzlich einen Bike-Shop in Sarnen übernommen und sitzt dort im Verwaltungsrat. Sein Erfolgsrezept bleibt dasselbe: im schlimmsten Fall wird es eine Erfahrung.",
+    ],
+    tips: [
+      "Dein Marketing ist deine Arbeit: Reto hat kaum Werbung geschaltet, seine Kundschaft kam fast ausschliesslich über Mundpropaganda und Empfehlungen.",
+      "Sei nicht der Chef, der alles besser kann: fördere Leute, die etwas gut können, statt alles selbst kontrollieren zu wollen.",
+      "Lebe im Hier und Jetzt: 95 % dessen, wovor wir uns fürchten, tritt nie ein. Investier deine Energie lieber in den nächsten kleinen Schritt als in Sorgen über die Zukunft.",
+    ],
+  },
+  {
+    number: 6,
+    slug: "6-reto-wallimann-vom-bauspengler-zum-firmenverkauf",
+    title:
+      "Im schlimmsten Fall wird's eine Erfahrung: Reto Wallimann vom Bauspengler zum Firmenverkauf (Teil 1)",
+    date: "2026-08-12",
+    duration: "58 Min",
+    publishAt: "2026-08-12T15:15:00+02:00",
+    description:
+      "Teil 1: Reto Wallimann übernahm mit 27 eine kleine Reinigungsfirma neben seinem Job, baute sie zu einem 100-Personen-Betrieb aus und verkaufte sie 2022 an einen Mitarbeiter. Über den Weg dahin, eine persönliche Krise, eine dreiwöchige Solo-Wanderung durch die Schweizer Alpen und warum er nie ein ängstlicher Mensch war.",
+    guest: {
+      name: "Reto Wallimann",
+      role: "Bike- & Mental-Coach, mental-bike-trainer.ch",
+      bio: "Reto lebt mit seiner Frau Lucia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
+      links: [
+        { label: "mental-bike-trainer.ch", href: "https://www.mental-bike-trainer.ch/" },
+        { label: "Instagram", href: "https://www.instagram.com/mental.bike.trainer/" },
+        { label: "Facebook", href: "https://www.facebook.com/reto.wallimann" },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/reto-wallimann-b36289108/",
+        },
+      ],
+    },
+    summary: [
+      "Reto machte 1990 eine Lehre als Bauspengler und später eine Handelsschule, weil er merkte, dass er nicht sein Leben lang aufs Dach wollte. 2009 wechselte er als Projektleiter ins Büro, bei der Kooperation Altnau für ein Holzheizwerk.",
+      "2011 übernahm er die Reinigungsfirma Geschaffung AG, ursprünglich als 50-Prozent-Nebenjob gedacht, nach wenigen Monaten stieg er zu 100 % ein. Die Firma wuchs auf rund 100 Angestellte, mit Gebäudereinigung und -unterhalt für Architekten und Liegenschaften.",
+      "2019 geriet er durch die Verantwortung für so viele Mitarbeitende in eine persönliche Krise. Nach vier Hypnosesitzungen entschied er sich für die Via Alpina, eine dreiwöchige Solo-Wanderung quer durch die Schweizer Alpen im Juli 2020, ganz ohne Musik oder Podcasts, nur um sich selbst zuzuhören.",
+      "Am 1. März 2022 verkaufte er die Firma an einen langjährigen Mitarbeiter und arbeitete bis Ende 2022 noch zu 80 % für die Übergabe. Persönlich erzählt er offen von einem Schicksalsschlag aus seiner Kindheit: Als Baby verlor er durch einen Tumor sein linkes Auge, was ihn zu dem extrem positiven Menschen gemacht hat, der er heute ist.",
+    ],
+    tips: [
+      "Wenn dir die Verantwortung über den Kopf wächst, nimm dir bewusst Zeit für dich, auch wenn das eine radikale Auszeit wie eine dreiwöchige Solo-Wanderung bedeutet.",
+      "Gib Menschen, denen du vertraust, echte Verantwortung: Reto hat sein Wachstum vor allem dadurch geschafft, dass er gute Leute gefördert statt kontrolliert hat.",
+      "Eine gute Übergabe braucht Vorbereitung, nicht Perfektion: Reto und sein Nachfolger waren sich in den ersten Minuten einig, weil die Übergabe langfristig vorbereitet war.",
+    ],
+  },
   {
     number: 5,
     slug: "5-michael-rohrer-schwingsport-selbststaendigkeit",

@@ -19,6 +19,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.machseifa.ch"),
   title: "Mach's eifach – Der Podcast",
   description:
     "Der Podcast über Selbstständigkeit, Unternehmertum und ein selbstbestimmtes Leben.",

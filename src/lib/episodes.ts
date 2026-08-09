@@ -54,7 +54,7 @@ export const episodes: Episode[] = [
     guest: {
       name: "Reto Wallimann",
       role: "Bike- & Mental-Coach, mental-bike-trainer.ch",
-      bio: "Reto lebt mit seiner Frau Lucia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
+      bio: "Reto lebt mit seiner Frau Luzia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
       links: [
         { label: "mental-bike-trainer.ch", href: "https://www.mental-bike-trainer.ch/" },
         { label: "Instagram", href: "https://www.instagram.com/mental.bike.trainer/" },
@@ -90,7 +90,7 @@ export const episodes: Episode[] = [
     guest: {
       name: "Reto Wallimann",
       role: "Bike- & Mental-Coach, mental-bike-trainer.ch",
-      bio: "Reto lebt mit seiner Frau Lucia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
+      bio: "Reto lebt mit seiner Frau Luzia in Sachseln, mitten im geografischen Zentrum der Schweiz. Er baute eine Reinigungsfirma auf über 100 Angestellte auf und verkaufte sie 2022, bevor er seine Leidenschaft fürs Biken zum Beruf machte: heute ist er Swiss-Cycling-Guide und diplomierter Mental-Coach mit Hypnose-Ausbildung.",
       links: [
         { label: "mental-bike-trainer.ch", href: "https://www.mental-bike-trainer.ch/" },
         { label: "Instagram", href: "https://www.instagram.com/mental.bike.trainer/" },

@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { episodes, isPublished } from "@/lib/episodes";
+import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://www.machseifa.ch";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/episoden", "/ueber-uns", "/kontakt"].map((path) => ({
+  const staticRoutes = ["", "/episoden", "/blog", "/ueber-uns", "/kontakt"].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
   }));
@@ -14,5 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(ep.date),
   }));
 
-  return [...staticRoutes, ...episodeRoutes];
+  const blogRoutes = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+  }));
+
+  return [...staticRoutes, ...episodeRoutes, ...blogRoutes];
 }

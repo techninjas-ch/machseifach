@@ -37,7 +37,7 @@ export function isPublished(episode: Episode): boolean {
 
 export const nextEpisode = {
   guestName: "Reto Wallimann",
-  date: "2026-08-12T15:15:00+02:00",
+  date: "2026-08-19T15:15:00+02:00",
 };
 
 export const episodes: Episode[] = [
@@ -85,6 +85,7 @@ export const episodes: Episode[] = [
     date: "2026-08-12",
     duration: "58 Min",
     publishAt: "2026-08-12T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/24YhdSlIl8rRwWQZB9IFLj",
     description:
       "Teil 1: Reto Wallimann übernahm mit 27 eine kleine Reinigungsfirma neben seinem Job, baute sie zu einem 100-Personen-Betrieb aus und verkaufte sie 2022 an einen Mitarbeiter. Über den Weg dahin, eine persönliche Krise, eine dreiwöchige Solo-Wanderung durch die Schweizer Alpen und warum er nie ein ängstlicher Mensch war.",
     guest: {

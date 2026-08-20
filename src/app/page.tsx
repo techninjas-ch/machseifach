@@ -3,6 +3,7 @@ import Link from "next/link";
 import { episodes, isPublished } from "@/lib/episodes";
 import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms } from "@/lib/platforms";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
+import CurrentEpisodeSpotlight from "@/components/CurrentEpisodeSpotlight";
 
 // Episodes can carry a future `publishAt`; re-check on every request so newly
 // published episodes (and the teaser) flip visible at the right time.
@@ -77,6 +78,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <CurrentEpisodeSpotlight />
 
       <NextEpisodeTeaser />
 

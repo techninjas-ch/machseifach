@@ -47,8 +47,9 @@ export const episodes: Episode[] = [
     title:
       "Vom Hobby zum Beruf: Reto Wallimann über Bike-Guiding und Mental-Coaching (Teil 2)",
     date: "2026-08-19",
-    duration: "1 Std 5 Min",
+    duration: "1 Std 8 Min",
     publishAt: "2026-08-19T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/6QVkXxhWW6F98kXcygteQw",
     description:
       "Teil 2: Nach dem Verkauf seiner Firma machte Reto Wallimann seine grösste Leidenschaft zum Beruf, als Bike-Guide und Mental-Coach mit Hypnose-Ausbildung. Über den Sprung vom Hobby zum Business, warum 70 bis 90 % im Spitzensport mental entschieden wird und sein Lebensmotto: im schlimmsten Fall wird's eine Erfahrung.",
     guest: {

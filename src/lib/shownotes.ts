@@ -3,9 +3,9 @@ import type { Episode } from "@/lib/episodes";
 const ABOUT_US_HTML = `<p><strong>Mehr über uns:</strong></p>
 
 <p>
-<a href="https://techninjas.ch/">Tech Ninjas</a><br>
 <a href="https://www.machseifa.ch/">Mach’s eifach</a><br>
 <a href="https://www.instagram.com/machs.eifach/">Mach’s eifach auf Instagram</a><br>
+<a href="https://techninjas.ch/">Tech Ninjas</a><br>
 <a href="https://www.instagram.com/techninjas.ch/">Tech Ninjas auf Instagram</a>
 </p>`;
 

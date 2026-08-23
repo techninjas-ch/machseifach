@@ -36,11 +36,46 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "Reto Wallimann",
-  date: "2026-08-19T15:15:00+02:00",
+  guestName: "Abiran Kanagalingam",
+  date: "2026-08-26T15:15:00+02:00",
 };
 
 export const episodes: Episode[] = [
+  {
+    number: 8,
+    slug: "8-abiran-kanagalingam-griit-ideen-sind-wertlos",
+    title:
+      "Ideen sind wertlos: Abiran Kanagalingam über GRIIT und 3D-Wandreliefs aus Strava-Daten",
+    date: "2026-08-26",
+    duration: "47 Min",
+    publishAt: "2026-08-26T15:15:00+02:00",
+    description:
+      "Abiran Kanagalingam verwandelt mit seinem Startup GRIIT Strava-, Garmin- und Komoot-Routen in 3D-Wandreliefs, physische Erinnerungsstücke für Marathon-Finishes, Trailruns und Velotouren. Über die Idee aus einer Marathon-Vorbereitung trotz Verletzung, den Aufbau einer eigenen 3D-Software neben dem Studium und warum Ideen wertlos sind, wenn man sie nicht umsetzt.",
+    guest: {
+      name: "Abiran Kanagalingam",
+      role: "Gründer, GRIIT",
+      bio: "Abiran gründete schon während des Gymnasiums eine eigene Nachhilfe-Firma. Nach einer Marathon-Vorbereitung trotz ärztlichem Rat kam ihm die Idee zu GRIIT: physische 3D-Wandreliefs aus echten Strava-, Garmin- oder Komoot-Routendaten. Zusammen mit einem befreundeten Informatik-Studenten entwickelte er dafür eine eigene 3D-Modellierungssoftware und baut GRIIT heute neben seinem Studium in Bern auf.",
+      links: [
+        { label: "griit.ch", href: "https://griit.ch/" },
+        { label: "Instagram", href: "https://www.instagram.com/griit.design/" },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/abiran-kanagalingam/",
+        },
+      ],
+    },
+    summary: [
+      "Abiran bereitete sich trotz einer Verletzung und ärztlichem Rat auf einen Marathon vor. Der entscheidende Gedanke kam ihm dabei: Eine solche Leistung verschwindet am Ende einfach in einer Trainings-App auf dem Handy, statt sichtbar zu bleiben. Daraus entstand die Idee zu GRIIT: die eigene Route als greifbares 3D-Relief für die Wand statt als Screenshot im Feed.",
+      "Unternehmerisch war er kein Neuling: Schon während des Gymnasiums baute er eine eigene Nachhilfe-Firma auf, später folgte ein früher, gescheiterter Versuch mit einer Nachhilfe-Vermittlungsplattform. Diese Rückschläge prägen bis heute seine Überzeugung, dass eine Idee für sich allein nichts wert ist, sie zählt erst, wenn man sie tatsächlich umsetzt.",
+      "Technisch basiert GRIIT auf dem GPX-Export aus Strava, Garmin oder Komoot. Zusammen mit einem befreundeten Informatik-Studenten als Co-Founder baute Abiran dafür eine eigene 3D-Modellierungssoftware, mit der Terrain, Strassen und Gebäude entlang der Route gestaltet und anschliessend als Relief gedruckt werden, ein Druckvorgang von rund drei bis vier Stunden, nach anfänglichen Fehldrucken wegen ungenauer Kalibrierung.",
+      "Nach rund fünf Wochen intensivem internem Aufbau, von der Software bis zur Buchhaltung, verlagert sich der Fokus nun auf Marketing: organisch über Instagram und LinkedIn, bewusst ohne TikTok oder Dropshipping. Reliefs an Schweizer Sportpersönlichkeiten wie Peter Bolliger oder den Charity-Läufer Ayub brachten erste Reichweite, langfristig denkt Abiran auch an andere Sportarten wie Triathlon oder eine Zusammenarbeit mit grossen Eventmarken wie Ironman.",
+    ],
+    tips: [
+      "Ideen sind wertlos, solange du sie nicht umsetzt: Fast jede Idee hatte schon irgendjemand anders, entscheidend ist nur, wer sie wirklich angeht.",
+      "Teste günstig statt perfekt zu planen: Ein einfacher Test mit ein paar hundert Franken Werbebudget zeigt schneller, ob echtes Interesse besteht, als monatelanges Ausarbeiten im Kopf.",
+      "Hab keine Angst, dass dir jemand deine Idee klaut: Die meisten Leute haben weder die Zeit noch den Antrieb, sie umzusetzen, sprich offen mit den richtigen Personen und hol dir ehrliches Feedback.",
+    ],
+  },
   {
     number: 7,
     slug: "7-reto-wallimann-vom-hobby-zum-beruf",

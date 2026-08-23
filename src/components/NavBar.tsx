@@ -9,6 +9,9 @@ import { SPOTIFY_URL } from "@/lib/platforms";
 const links = [
   { href: "/#episoden", label: "Episoden" },
   { href: "/blog", label: "Blog" },
+  { href: "/selbstaendig", label: "Selbstständig" },
+  { href: "/ortsunabhaengig", label: "Ortsunabhängig" },
+  { href: "/tools", label: "Tools" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/kontakt", label: "Kontakt" },
 ];

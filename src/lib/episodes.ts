@@ -36,8 +36,8 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "Abiran Kanagalingam",
-  date: "2026-08-26T15:15:00+02:00",
+  guestName: "???",
+  date: "2026-09-02T15:15:00+02:00",
 };
 
 export const episodes: Episode[] = [
@@ -47,8 +47,9 @@ export const episodes: Episode[] = [
     title:
       "Ideen sind wertlos: Abiran Kanagalingam über GRIIT und 3D-Wandreliefs aus Strava-Daten",
     date: "2026-08-26",
-    duration: "47 Min",
+    duration: "39 Min",
     publishAt: "2026-08-26T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/29LoVxA2xK5ek7SqfeIzWy",
     description:
       "Abiran Kanagalingam verwandelt mit seinem Startup GRIIT Strava-, Garmin- und Komoot-Routen in 3D-Wandreliefs, physische Erinnerungsstücke für Marathon-Finishes, Trailruns und Velotouren. Über die Idee aus einer Marathon-Vorbereitung trotz Verletzung, den Aufbau einer eigenen 3D-Software neben dem Studium und warum Ideen wertlos sind, wenn man sie nicht umsetzt.",
     guest: {

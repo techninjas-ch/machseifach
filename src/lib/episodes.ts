@@ -36,11 +36,71 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "???",
+  guestName: "Nadia Leuenberger",
   date: "2026-09-02T15:15:00+02:00",
 };
 
+const NADIA_GUEST: Guest = {
+  name: "Nadia Leuenberger",
+  role: "Ernährungsberaterin & Geschäftsführerin, Peak Nutrition",
+  bio: "Nadia ist Ernährungsberaterin und Ernährungswissenschaftlerin (MSc BFH), unterrichtet nebenbei an der Berner Fachhochschule und ist Geschäftsführerin von Peak Nutrition, einer auf Sporternährung spezialisierten Praxis im Medical Center Wankdorf in Bern. Sie war selbst lange Turnier-Tennis- und Beach-Tennis-Spielerin.",
+  links: [
+    { label: "peaknutrition.ch", href: "https://www.peaknutrition.ch/" },
+    { label: "Instagram", href: "https://www.instagram.com/peaknutrition_ch/" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/nadia-leuenberger-795280133/",
+    },
+  ],
+};
+
 export const episodes: Episode[] = [
+  {
+    number: 10,
+    slug: "10-nadia-leuenberger-ernaehrungs-dschungel-und-tipps",
+    title:
+      "Raus aus dem Ernährungs-Dschungel: Nadia Leuenberger über Sporternährung, Mythen und ihre Tipps für Selbstständige (Teil 2)",
+    date: "2026-09-09",
+    duration: "29 Min",
+    publishAt: "2026-09-09T15:15:00+02:00",
+    description:
+      "Teil 2: Nadia Leuenberger räumt mit Ernährungsmythen wie dem Protein-Hype und nüchternem Training auf, gibt ihren wichtigsten praktischen Ernährungstipp und teilt, was angehenden Selbstständigen wirklich weiterhilft, von Netzwerken bis zu kostenlosen Beratungsangeboten.",
+    guest: NADIA_GUEST,
+    summary: [
+      "Peak Nutrition arbeitet aus zwei fixen Büros im Medical Center Wankdorf, kombiniert mit viel Remote-Arbeit: Viele Athletinnen und Athleten aus der ganzen Schweiz und dem Ausland werden online betreut. Dem Team lässt Nadia bewusst Freiheit, wie und wo sie arbeiten, solange die nötigen Absprachen funktionieren.",
+      "Beim Protein-Hype ordnet Nadia ein: Die meisten High-Protein-Produkte sind vor allem gutes Marketing der Lebensmittelindustrie, viele Menschen decken ihren Proteinbedarf längst über normale Lebensmittel wie Quark, Magerquark oder Käse. Auch beim Trend zum nüchternen Training rät sie zur Vorsicht, kurzfristig mag es funktionieren, langfristig sieht sie in ihrer Beratungspraxis eher Nachteile.",
+      "Ihr wichtigster praktischer Tipp bleibt bewusst einfach: drei ausgewogene Mahlzeiten am Tag mit den Komponenten Protein, Gemüse und Kohlenhydrate, dazu rund 25 Gramm Eiweiss pro Mahlzeit. Das deckt schon einen grossen Teil ab, auch ein Shake mit Quark, Banane und Haferflocken zählt dabei mit.",
+      "Zum Schluss gibt sie ihre wichtigsten Tipps für alle, die den Schritt in die Selbstständigkeit erwägen: sich unbedingt mit anderen austauschen, sich Mentorinnen und Mentoren suchen und kostenlose kantonale Angebote wie die Gründerberatung von be-advanced in Bern nutzen. Je grösser das eigene Netzwerk, desto mehr Know-how lässt sich mitnehmen.",
+    ],
+    tips: [
+      "Grössere Netzwerke bringen mehr Know-how: Sprich mit anderen über deine Pläne, such dir Mentorinnen und Mentoren und nutze kostenlose Angebote wie die Gründerberatung von be-advanced in Bern.",
+      "Gib deinem Team so viel Flexibilität wie möglich, solange die Absprachen stimmen: Nadias Team arbeitet remote und vor Ort, ganz danach, was für Kundschaft und Team am besten funktioniert.",
+      "Trau nicht jedem Ernährungstrend: Viele Hypes wie High-Protein-Produkte sind vor allem gutes Marketing, mit drei ausgewogenen Mahlzeiten pro Tag deckst du die Basis schon ab.",
+    ],
+  },
+  {
+    number: 9,
+    slug: "9-nadia-leuenberger-vom-tennisplatz-zu-peak-nutrition",
+    title:
+      "Eine Achterbahn mit Looping: Nadia Leuenberger über ihren Weg vom Tennisplatz zu Peak Nutrition (Teil 1)",
+    date: "2026-09-02",
+    duration: "44 Min",
+    publishAt: "2026-09-02T15:15:00+02:00",
+    description:
+      "Teil 1: Nadia Leuenberger ist Ernährungsberaterin und Mitgründerin von Peak Nutrition, einer Sporternährungsfirma im Wankdorf Bern. Über ihre Tenniskarriere, einen schweren Unfall mit 16, den Weg in die Ernährungsberatung und die Achterbahn der ersten Unternehmensjahre.",
+    guest: NADIA_GUEST,
+    summary: [
+      "Nadia spielte ihr Leben lang Tennis und ärgerte sich an Turnieren im Ausland jeweils über einseitige Verpflegung vor den Matches. Ein Referat einer Ernährungsberaterin am Zukunftstag in der Schule überzeugte sie schliesslich, selbst diesen Weg einzuschlagen. Parallel dazu spielte sie mit ihrer Schwester jahrelang sehr erfolgreich Beach-Tennis, bis in Schweizer-Meisterschafts-Finals.",
+      "Mit 16 erlitt sie einen schweren Unfall und war zeitweise auf den Rollstuhl angewiesen, die Ärzte konnten ihr nicht sagen, ob und wann sich das wieder ändern würde. Die Reha-Zeit, kurz vor einem geplanten Umzug in die USA fürs Tennis, prägte sie enorm: Sie erkannte, dass sie anderen Menschen helfen wollte, und sie beschreibt sich seither als „hoffnungslose Optimistin”.",
+      "Nach dem Bachelor und einer Masterarbeit zu personalisierter Ernährung im Spitzensport, die sie mit rund 50 Athletinnen und Athleten durchführte, gründete sie neben ihrer Festanstellung zunächst eine Einzelfirma für Beratungen. 2023 gründete sie zusammen mit einer guten Freundin und ehemaligen Arbeitskollegin die Peak Nutrition GmbH, mit Standort im neuen Medical Center Wankdorf.",
+      "Die ersten Jahre beschreibt sie als „Achterbahn mit Looping”: Sie behielt bewusst ihre Festanstellung als Sicherheitsnetz, während die Firma nebenbei wuchs. Bei einer 50/50-Beteiligung mussten sie und ihre Partnerin sich täglich abstimmen, eine intensive, aber wichtige Zusammenarbeit. Im April 2026 stieg ihre Geschäftspartnerin aus, um sich auf ihre Familie zu konzentrieren, ein grosser, aber nachvollziehbarer Verlust, seither trifft Nadia die strategischen Entscheidungen allein.",
+    ],
+    tips: [
+      "Eine Selbstständigkeit ist eine Achterbahn mit Looping, nicht nur ein stetiger Aufstieg: Rechne von Anfang an mit Zweifeln und Ängsten, nicht nur mit Erfolgsmomenten.",
+      "Ein finanzielles Sicherheitsnetz macht den Sprung leichter: Nadia behielt bewusst ihre Festanstellung, während sie die Firma nebenbei aufbaute.",
+      "Bei einer 50/50-Partnerschaft ist tägliche, ehrliche Kommunikation entscheidend, ihr müsst euch praktisch jeden Tag einigen können.",
+    ],
+  },
   {
     number: 8,
     slug: "8-abiran-kanagalingam-griit-ideen-sind-wertlos",

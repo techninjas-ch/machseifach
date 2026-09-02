@@ -46,7 +46,11 @@ const NADIA_GUEST: Guest = {
   bio: "Nadia ist Ernährungsberaterin und Ernährungswissenschaftlerin (MSc BFH), unterrichtet nebenbei an der Berner Fachhochschule und ist Geschäftsführerin von Peak Nutrition, einer auf Sporternährung spezialisierten Praxis im Medical Center Wankdorf in Bern. Sie war selbst lange Turnier-Tennis- und Beach-Tennis-Spielerin.",
   links: [
     { label: "peaknutrition.ch", href: "https://www.peaknutrition.ch/" },
-    { label: "Instagram", href: "https://www.instagram.com/peaknutrition_ch/" },
+    { label: "Instagram (Peak Nutrition)", href: "https://www.instagram.com/peaknutrition_ch/" },
+    {
+      label: "Instagram (persönlich)",
+      href: "https://www.instagram.com/nadia_nutrition_sport/",
+    },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/nadia-leuenberger-795280133/",

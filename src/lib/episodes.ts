@@ -88,8 +88,9 @@ export const episodes: Episode[] = [
     title:
       "Eine Achterbahn mit Looping: Nadia Leuenberger über ihren Weg vom Tennisplatz zu Peak Nutrition (Teil 1)",
     date: "2026-09-02",
-    duration: "44 Min",
+    duration: "40 Min",
     publishAt: "2026-09-02T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/1GBQr89yTXBRYIGySPc3Tu",
     description:
       "Teil 1: Nadia Leuenberger ist Ernährungsberaterin und Mitgründerin von Peak Nutrition, einer Sporternährungsfirma im Wankdorf Bern. Über ihre Tenniskarriere, einen schweren Unfall mit 16, den Weg in die Ernährungsberatung und die Achterbahn der ersten Unternehmensjahre.",
     guest: NADIA_GUEST,

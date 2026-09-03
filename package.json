@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "youtube:auth": "tsx scripts/youtube-auth.ts",
+    "youtube:upload": "tsx scripts/youtube-upload.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -19,9 +21,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "googleapis": "^178.0.0",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5"
   }
 }

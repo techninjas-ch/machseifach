@@ -32,6 +32,11 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# YouTube upload tool credentials (scripts/youtube-*.ts)
+scripts/.youtube-client-secret.json
+scripts/.youtube-token.json
 
 # vercel
 .vercel

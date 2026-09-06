@@ -36,8 +36,8 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "Nadia Leuenberger",
-  date: "2026-09-02T15:15:00+02:00",
+  guestName: "???",
+  date: "2026-09-09T15:15:00+02:00",
 };
 
 const NADIA_GUEST: Guest = {
@@ -60,13 +60,13 @@ const NADIA_GUEST: Guest = {
 
 export const episodes: Episode[] = [
   {
-    number: 10,
-    slug: "10-nadia-leuenberger-ernaehrungs-dschungel-und-tipps",
+    number: 11,
+    slug: "11-nadia-leuenberger-ernaehrungs-dschungel-und-tipps",
     title:
       "Raus aus dem Ernährungs-Dschungel: Nadia Leuenberger über Sporternährung, Mythen und ihre Tipps für Selbstständige (Teil 2)",
-    date: "2026-09-09",
+    date: "2026-09-16",
     duration: "29 Min",
-    publishAt: "2026-09-09T15:15:00+02:00",
+    publishAt: "2026-09-16T15:15:00+02:00",
     description:
       "Teil 2: Nadia Leuenberger räumt mit Ernährungsmythen wie dem Protein-Hype und nüchternem Training auf, gibt ihren wichtigsten praktischen Ernährungstipp und teilt, was angehenden Selbstständigen wirklich weiterhilft, von Netzwerken bis zu kostenlosen Beratungsangeboten.",
     guest: NADIA_GUEST,
@@ -80,6 +80,27 @@ export const episodes: Episode[] = [
       "Grössere Netzwerke bringen mehr Know-how: Sprich mit anderen über deine Pläne, such dir Mentorinnen und Mentoren und nutze kostenlose Angebote wie die Gründerberatung von be-advanced in Bern.",
       "Gib deinem Team so viel Flexibilität wie möglich, solange die Absprachen stimmen: Nadias Team arbeitet remote und vor Ort, ganz danach, was für Kundschaft und Team am besten funktioniert.",
       "Trau nicht jedem Ernährungstrend: Viele Hypes wie High-Protein-Produkte sind vor allem gutes Marketing, mit drei ausgewogenen Mahlzeiten pro Tag deckst du die Basis schon ab.",
+    ],
+  },
+  {
+    number: 10,
+    slug: "10-mirjam-patrick-kein-zuhause-kein-job-kein-problem",
+    title: "Kein Zuhause, kein Job, kein Problem: Unser Update zur 10. Folge",
+    date: "2026-09-06",
+    duration: "33 Min",
+    description:
+      "Zur zehnten Folge geben wir ein persönliches Update: Wohnungsauflösung, Patricks Kündigung, Housesitting in Biel und was wir aus den ersten zehn Podcast-Folgen gelernt haben.",
+    summary: [
+      "Die letzten Wochen waren intensiv: Wir mussten unsere Wohnung aufgeben, veranstalteten einen Wohnungsflohmarkt (mit durchzogenem Erfolg, es kamen nur zwei Käufer trotz Flyern), wurden den Rest über Strassenverkauf, Ricardo und das Brockenhaus los und verbrachten danach eine Woche im Airbnb.",
+      "Beruflich ist Patrick seit dem 1. September offiziell arbeitslos, ganz bewusst, um sich zu 100 % unserem Business zu widmen. Mirjam ist weiterhin 100 % angestellt, hat aber ausgehandelt, ab November und Dezember zu 50 % remote aus dem Ausland zu arbeiten. Unsere Firma läuft aktuell als Einzelfirma auf Patrick, weil Mirjam noch angestellt ist, dazu kommen neue Themen wie Mehrwertsteuer, AHV, Versicherungen und die Frage nach einer Adresse ohne festen Schweizer Wohnsitz.",
+      "Auf der Business-Seite hatten wir ein professionelles Foto- und Videoshooting fürs Web und Social Media, dazu erste bezahlte Werbung zur Kundengewinnung. Ziemlich symbolisch: Unser bisher grösster Auftrag kam ausgerechnet am ersten Tag ohne Festanstellung herein.",
+      "Beim Rückblick auf die ersten zehn Folgen ziehen wir ein positives Fazit: mehrheitlich begeistertes Feedback, von Folge zu Folge steigende Hörerzahlen und viele spannende Begegnungen mit Gästen. Als Learnings nennen wir den Wert von unvorbereiteten, authentischen Fragen statt Skript, Anfängerfehler beim Schnitt (die Software schnitt anfangs versehentlich Pausen und Betonungen weg) und den Wunsch, künftig mehr weibliche Gäste einzuladen.",
+      "Aktuell sind wir für fünf Wochen Housesitter in Biel und hüten eine Katze namens Pitschi. Danach geht unsere Reise ohne festen Plan weiter, vermutlich Richtung Asien. Die nächste Jubiläumsfolge ist für Folge 20 angekündigt.",
+    ],
+    tips: [
+      "Fang bei grossen Veränderungen früh genug an: Bei unserer Wohnungsauflösung kam viel mehr zusammen, als wir gedacht hätten.",
+      "Wenn du bei etwas ein schlechtes Bauchgefühl hast, es nicht zu tun, ist das oft das Zeichen, es trotzdem anzugehen, auch ohne 100 % Sicherheit.",
+      "Learning by doing: Es muss nicht von Anfang an perfekt sein, einfach starten und unterwegs besser werden.",
     ],
   },
   {

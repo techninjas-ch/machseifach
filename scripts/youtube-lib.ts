@@ -7,7 +7,9 @@ import { buildShownotesHtml } from "../src/lib/shownotes";
 
 const scriptsDir = path.dirname(fileURLToPath(import.meta.url));
 
-export const SCOPES = ["https://www.googleapis.com/auth/youtube.upload"];
+// youtube.upload alone allows uploading but not editing an existing video's
+// title/description afterwards; youtube.force-ssl covers both.
+export const SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"];
 
 export const CLIENT_SECRET_PATH = path.join(scriptsDir, ".youtube-client-secret.json");
 export const TOKEN_PATH = path.join(scriptsDir, ".youtube-token.json");
@@ -47,7 +49,7 @@ function truncate(text: string, limit: number): string {
 }
 
 export function buildYoutubeTitle(episode: Episode): string {
-  return truncate(episode.title, YOUTUBE_TITLE_LIMIT);
+  return truncate(`Mach’s eifach: Folge ${episode.number} – ${episode.title}`, YOUTUBE_TITLE_LIMIT);
 }
 
 export function buildYoutubeDescription(episode: Episode): string {

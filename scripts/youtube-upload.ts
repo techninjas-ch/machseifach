@@ -59,12 +59,22 @@ async function uploadFile(filePath: string, episodeNumber: number) {
   const title = buildYoutubeTitle(episode);
   const description = buildYoutubeDescription(episode);
 
+  // If the episode is still time-gated on the site (publishAt in the future),
+  // schedule the video for that same moment instead of publishing right away.
+  const scheduledFor =
+    episode.publishAt && new Date(episode.publishAt).getTime() > Date.now() ? episode.publishAt : null;
+
   console.log(`\n— ${path.basename(filePath)} —`);
   console.log(`Episode ${episode.number}: ${episode.title}`);
   console.log(`YouTube-Titel: ${title}`);
   console.log(`Beschreibung (${description.length} Zeichen):\n${description.slice(0, 300)}${description.length > 300 ? "…" : ""}`);
+  console.log(
+    scheduledFor
+      ? `Sichtbarkeit: geplant für ${new Date(scheduledFor).toLocaleString("de-CH")} (bis dahin privat)`
+      : "Sichtbarkeit: sofort öffentlich",
+  );
 
-  const proceed = await confirm("\nHochladen und veröffentlichen?");
+  const proceed = await confirm(scheduledFor ? "\nHochladen und planen?" : "\nHochladen und veröffentlichen?");
   if (!proceed) {
     console.log("Übersprungen.");
     return;
@@ -82,10 +92,16 @@ async function uploadFile(filePath: string, episodeNumber: number) {
         ),
         categoryId: YOUTUBE_CATEGORY_ID,
       },
-      status: {
-        privacyStatus: "public",
-        selfDeclaredMadeForKids: false,
-      },
+      status: scheduledFor
+        ? {
+            privacyStatus: "private",
+            publishAt: new Date(scheduledFor).toISOString(),
+            selfDeclaredMadeForKids: false,
+          }
+        : {
+            privacyStatus: "public",
+            selfDeclaredMadeForKids: false,
+          },
     },
     media: {
       body: fs.createReadStream(filePath),
@@ -93,7 +109,11 @@ async function uploadFile(filePath: string, episodeNumber: number) {
   });
 
   const videoId = res.data.id;
-  console.log(`✔ Hochgeladen: https://youtu.be/${videoId}`);
+  console.log(
+    scheduledFor
+      ? `✔ Hochgeladen und geplant (privat bis ${new Date(scheduledFor).toLocaleString("de-CH")}): https://youtu.be/${videoId}`
+      : `✔ Hochgeladen: https://youtu.be/${videoId}`,
+  );
 
   const processedDir = path.join(path.dirname(filePath), "processed");
   fs.mkdirSync(processedDir, { recursive: true });

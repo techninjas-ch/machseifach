@@ -87,7 +87,8 @@ export const episodes: Episode[] = [
     slug: "10-mirjam-patrick-kein-zuhause-kein-job-kein-problem",
     title: "Kein Zuhause, kein Job, kein Problem: Unser Update zur 10. Folge",
     date: "2026-09-06",
-    duration: "33 Min",
+    duration: "32 Min",
+    spotifyUrl: "https://open.spotify.com/episode/1az5DBJ9Ktt7SyLEI67olt",
     description:
       "Zur zehnten Folge geben wir ein persönliches Update: Wohnungsauflösung, Patricks Kündigung, Housesitting in Biel und was wir aus den ersten zehn Podcast-Folgen gelernt haben.",
     summary: [

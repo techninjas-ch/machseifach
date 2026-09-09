@@ -81,32 +81,71 @@ async function uploadFile(filePath: string, episodeNumber: number) {
   }
 
   const youtube = getYoutubeClient();
-  const res = await youtube.videos.insert({
-    part: ["snippet", "status"],
-    requestBody: {
-      snippet: {
-        title,
-        description,
-        tags: ["Podcast", "Selbstständigkeit", "Unternehmertum", "Schweiz", "Mach's eifach", episode.guest?.name].filter(
-          (t): t is string => Boolean(t),
-        ),
-        categoryId: YOUTUBE_CATEGORY_ID,
-      },
-      status: scheduledFor
-        ? {
-            privacyStatus: "private",
-            publishAt: new Date(scheduledFor).toISOString(),
-            selfDeclaredMadeForKids: false,
-          }
-        : {
-            privacyStatus: "public",
-            selfDeclaredMadeForKids: false,
+  const fileSize = fs.statSync(filePath).size;
+  const maxAttempts = 3;
+  let lastError: unknown;
+  let res: { data: { id?: string | null } } | undefined;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      res = await youtube.videos.insert(
+        {
+          part: ["snippet", "status"],
+          requestBody: {
+            snippet: {
+              title,
+              description,
+              tags: [
+                "Podcast",
+                "Selbstständigkeit",
+                "Unternehmertum",
+                "Schweiz",
+                "Mach's eifach",
+                episode.guest?.name,
+              ].filter((t): t is string => Boolean(t)),
+              categoryId: YOUTUBE_CATEGORY_ID,
+            },
+            status: scheduledFor
+              ? {
+                  privacyStatus: "private",
+                  publishAt: new Date(scheduledFor).toISOString(),
+                  selfDeclaredMadeForKids: false,
+                }
+              : {
+                  privacyStatus: "public",
+                  selfDeclaredMadeForKids: false,
+                },
           },
-    },
-    media: {
-      body: fs.createReadStream(filePath),
-    },
-  });
+          media: {
+            body: fs.createReadStream(filePath),
+          },
+        },
+        {
+          // Providing onUploadProgress makes googleapis use YouTube's chunked
+          // "resumable" upload protocol instead of a single multipart request,
+          // which is far less likely to die with EPIPE on a large file over a
+          // flaky connection.
+          onUploadProgress: (evt) => {
+            const pct = fileSize ? Math.min(100, Math.round((evt.bytesRead / fileSize) * 100)) : 0;
+            process.stdout.write(`\rUpload: ${pct}%   `);
+          },
+        },
+      );
+      process.stdout.write("\n");
+      break;
+    } catch (err) {
+      lastError = err;
+      process.stdout.write("\n");
+      if (attempt < maxAttempts) {
+        console.warn(`⚠ Upload-Versuch ${attempt} fehlgeschlagen (${(err as Error).message}), versuche erneut …`);
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+      }
+    }
+  }
+
+  if (!res) {
+    throw lastError instanceof Error ? lastError : new Error(String(lastError));
+  }
 
   const videoId = res.data.id;
   console.log(

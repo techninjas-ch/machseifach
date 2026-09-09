@@ -36,8 +36,8 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "???",
-  date: "2026-09-09T15:15:00+02:00",
+  guestName: "Isabel Kohler",
+  date: "2026-09-23T15:15:00+02:00",
 };
 
 const NADIA_GUEST: Guest = {
@@ -60,13 +60,45 @@ const NADIA_GUEST: Guest = {
 
 export const episodes: Episode[] = [
   {
+    number: 12,
+    slug: "12-isabel-kohler-starte-unperfekt",
+    title:
+      "Starte unperfekt: Isabel Kohler über ihren Weg von der virtuellen Assistenz zum eigenen Branding-Business",
+    date: "2026-09-23",
+    duration: "59 Min",
+    publishAt: "2026-09-23T15:15:00+02:00",
+    description:
+      "Isabel Kohler startete als virtuelle Assistentin und hat sich zur Branding- und Social-Media-Spezialistin für Selbstständige und KMU entwickelt. Über ihren Umweg via Flugbegleiterin, den Absprung aus einem belastenden Job dank einer Online-Challenge und warum bei ihr immer die Strategie vor der Kreativität kommt.",
+    guest: {
+      name: "Isabel Kohler",
+      role: "Gründerin, VAISA",
+      bio: "Isabel ist gelernte Kauffrau, war ein Jahr lang Flugbegleiterin und bildete sich zur Direktionsassistentin weiter, bevor sie über eine virtuelle-Assistenz-Challenge den Sprung in die Selbstständigkeit wagte. Heute führt sie mit VAISA in Thun ein Branding- und Social-Media-Business für Selbstständige und KMU.",
+      links: [
+        { label: "vaisa.ch", href: "https://vaisa.ch/" },
+        { label: "Instagram", href: "https://www.instagram.com/vaisa.by.isabel/" },
+        { label: "LinkedIn", href: "https://ch.linkedin.com/in/isabel-kohler-4a5844242" },
+      ],
+    },
+    summary: [
+      "Isabel machte zunächst eine KV-Lehre und arbeitete im Reisebüro, bevor sie sich kurz vor Corona ein Jahr lang als Flugbegleiterin versuchte. Das Reisen begeisterte sie, doch Zeitverschiebung, Schlafmangel und der Lifestyle passten langfristig nicht zu ihr. Über eine Weiterbildung zur Direktionsassistentin stiess sie im Moneypenny-Magazin auf den Begriff virtuelle Assistenz, mitten in einem belastenden Job mit viel Überstunden und internen Konflikten in der Geschäftsleitung. Den letzten Anstoss gab eine kostenlose fünftägige Online-Challenge einer bekannten VA-Influencerin.",
+      "Ihre ersten Kundinnen fand sie über ihr Netzwerk, den Verein Virtuelle Assistenz Schweiz und eine ehemalige Arbeitskollegin, die ihr einen Kontakt am Inselspital Bern vermittelte. Anfangs machte sie vor allem Backoffice- und Social-Media-Arbeit, rein remote, inklusive fünf Wochen als digitale Nomadin in Griechenland. Mit der Zeit merkte sie aber, dass ihr die persönliche, lokale Zusammenarbeit mit Kundinnen mehr liegt als reine Remote-Arbeit von überall.",
+      "Vor rund zwei Jahren machte sie eine halbjährige Online-Ausbildung in Grafikdesign mit Vertiefung Branding und Layout und verlagerte ihren Fokus komplett von Backoffice zu Branding und Social Media. Ihr Prozess beginnt immer mit Strategie: Fragebogen, Strategiegespräch, Zielgruppen- und Konkurrenzanalyse, dann Moodboards, erst danach das eigentliche Design. Für professionelle Markenarbeit nutzt sie Illustrator, für die Zusammenarbeit mit Kundinnen Canva. KI setzt sie für Inspiration und Bildgenerierung ein, ist aber überzeugt, dass der persönliche Strategieprozess dadurch nicht ersetzt wird, ohne den sehen am Ende alle Marken gleich aus.",
+      "Ihr wichtigster Rat: sich mit anderen Selbstständigen vernetzen, nicht nur für die Kundengewinnung, sondern als Support. Und: unperfekt starten, keine perfekte Webseite oder fertiger Businessplan nötig, sondern Schritt für Schritt das angehen, was gerade wirklich wichtig ist. Nach ihren Erfahrungen mit Überlastung im Angestelltenverhältnis ist ihr eine gute Work-Life-Balance heute besonders wichtig, mit klarer Struktur im Alltag, aber auch der Freiheit, spontan mal einen Vormittag freizunehmen.",
+    ],
+    tips: [
+      "Bau dir ein Netzwerk aus anderen Selbstständigen auf, nicht nur zur Kundengewinnung, sondern als Support: Austausch mit Leuten in einer ähnlichen Situation ist Gold wert.",
+      "Starte unperfekt: Du brauchst am Anfang keine perfekte Webseite, keinen fertigen Businessplan und keinen Newsletter, sondern nur das, was gerade wirklich wichtig ist.",
+      "Strategie kommt vor Kreativität: Ohne ein klares Bild von Zielgruppe und Positionierung sieht am Ende alles gleich aus, egal wie viel KI oder wie viele Tools du einsetzt.",
+    ],
+  },
+  {
     number: 11,
     slug: "11-nadia-leuenberger-ernaehrungs-dschungel-und-tipps",
     title:
       "Raus aus dem Ernährungs-Dschungel: Nadia Leuenberger über Sporternährung, Mythen und ihre Tipps für Selbstständige (Teil 2)",
-    date: "2026-09-16",
-    duration: "29 Min",
-    publishAt: "2026-09-16T15:15:00+02:00",
+    date: "2026-09-09",
+    duration: "32 Min",
+    spotifyUrl: "https://open.spotify.com/episode/3Qa7wfKiMpaLyajMEShB18",
     description:
       "Teil 2: Nadia Leuenberger räumt mit Ernährungsmythen wie dem Protein-Hype und nüchternem Training auf, gibt ihren wichtigsten praktischen Ernährungstipp und teilt, was angehenden Selbstständigen wirklich weiterhilft, von Netzwerken bis zu kostenlosen Beratungsangeboten.",
     guest: NADIA_GUEST,

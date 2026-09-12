@@ -14,3 +14,22 @@ export function spotifyEmbedUrl(episodeUrl: string): string {
   const id = episodeUrl.split("/episode/")[1]?.split(/[?#]/)[0];
   return `https://open.spotify.com/embed/episode/${id}?utm_source=generator`;
 }
+
+/**
+ * Fetches an episode's thumbnail via Spotify's public oEmbed endpoint (no
+ * auth needed). This is a frame from the video recording, not a designed
+ * cover image. Cached for 30 days since it never changes once published;
+ * returns null on any failure so callers can fall back to a placeholder.
+ */
+export async function spotifyThumbnailUrl(episodeUrl: string): Promise<string | null> {
+  try {
+    const res = await fetch(`https://open.spotify.com/oembed?url=${encodeURIComponent(episodeUrl)}`, {
+      next: { revalidate: 60 * 60 * 24 * 30 },
+    });
+    if (!res.ok) return null;
+    const data: { thumbnail_url?: string } = await res.json();
+    return data.thumbnail_url ?? null;
+  } catch {
+    return null;
+  }
+}

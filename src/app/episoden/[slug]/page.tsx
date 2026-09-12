@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { episodes, isPublished } from "@/lib/episodes";
-import { spotifyEmbedUrl } from "@/lib/platforms";
+import { spotifyEmbedUrl, spotifyThumbnailUrl } from "@/lib/platforms";
 import { buildShownotesHtml } from "@/lib/shownotes";
 import ShareButton from "@/components/ShareButton";
 import CopyShownotesButton from "@/components/CopyShownotesButton";
@@ -41,6 +41,7 @@ export default async function EpisodeDetailPage({
   const { slug } = await params;
   const episode = findEpisode(slug);
   if (!episode || !isPublished(episode)) notFound();
+  const thumbnail = episode.spotifyUrl ? await spotifyThumbnailUrl(episode.spotifyUrl) : null;
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
@@ -52,8 +53,20 @@ export default async function EpisodeDetailPage({
       </Link>
 
       <div className="mt-6 flex items-center gap-4">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-lg font-bold text-[var(--background)]">
-          {String(episode.number).padStart(2, "0")}
+        <div className="relative h-16 w-16 shrink-0">
+          {thumbnail ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={thumbnail} alt="" className="h-full w-full rounded-2xl object-cover" />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center rounded-2xl bg-[var(--accent)] text-lg font-bold text-[var(--background)]">
+              {String(episode.number).padStart(2, "0")}
+            </div>
+          )}
+          {thumbnail && (
+            <div className="absolute -bottom-1.5 -left-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-bold text-[var(--background)] ring-2 ring-[var(--background)]">
+              {String(episode.number).padStart(2, "0")}
+            </div>
+          )}
         </div>
         <p className="text-[13px] text-[var(--muted-2)]">
           {new Date(episode.date).toLocaleDateString("de-CH", {

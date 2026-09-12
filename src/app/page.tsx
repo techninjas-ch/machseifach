@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { episodes, isPublished } from "@/lib/episodes";
-import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms } from "@/lib/platforms";
+import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms, spotifyThumbnailUrl } from "@/lib/platforms";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 import CurrentEpisodeSpotlight from "@/components/CurrentEpisodeSpotlight";
 
@@ -9,8 +9,13 @@ import CurrentEpisodeSpotlight from "@/components/CurrentEpisodeSpotlight";
 // published episodes (and the teaser) flip visible at the right time.
 export const dynamic = "force-dynamic";
 
-export default function Home() {
+export default async function Home() {
   const latest = episodes.filter(isPublished).slice(0, 3);
+  const thumbnails = Object.fromEntries(
+    await Promise.all(
+      latest.map(async (ep) => [ep.number, ep.spotifyUrl ? await spotifyThumbnailUrl(ep.spotifyUrl) : null]),
+    ),
+  );
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -97,8 +102,24 @@ export default function Home() {
               key={ep.number}
               className="flex items-start gap-5 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-7"
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-lg font-bold text-[var(--background)]">
-                {String(ep.number).padStart(2, "0")}
+              <div className="relative h-20 w-20 shrink-0">
+                {thumbnails[ep.number] ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={thumbnails[ep.number]!}
+                    alt=""
+                    className="h-full w-full rounded-2xl object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center rounded-2xl bg-[var(--accent)] text-lg font-bold text-[var(--background)]">
+                    {String(ep.number).padStart(2, "0")}
+                  </div>
+                )}
+                {thumbnails[ep.number] && (
+                  <div className="absolute -bottom-2 -left-2 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-[var(--background)] ring-2 ring-[var(--surface)]">
+                    {String(ep.number).padStart(2, "0")}
+                  </div>
+                )}
               </div>
               <div className="flex-1">
                 <div className="mb-1.5 text-[13px] text-[var(--muted-2)]">{ep.duration}</div>

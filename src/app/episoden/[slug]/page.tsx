@@ -53,7 +53,7 @@ export default async function EpisodeDetailPage({
       </Link>
 
       <div className="mt-6 flex items-center gap-4">
-        <div className="relative h-16 w-16 shrink-0">
+        <div className="relative h-16 w-28 shrink-0">
           {thumbnail ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={thumbnail} alt="" className="h-full w-full rounded-2xl object-cover" />

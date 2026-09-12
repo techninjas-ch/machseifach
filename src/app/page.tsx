@@ -102,7 +102,7 @@ export default async function Home() {
               key={ep.number}
               className="flex items-start gap-5 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-7"
             >
-              <div className="relative h-20 w-20 shrink-0">
+              <div className="relative h-20 w-36 shrink-0">
                 {thumbnails[ep.number] ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

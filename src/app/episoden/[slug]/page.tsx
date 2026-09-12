@@ -52,31 +52,29 @@ export default async function EpisodeDetailPage({
         ← Alle Episoden
       </Link>
 
-      <div className="mt-6 flex items-center gap-4">
-        <div className="relative h-16 w-28 shrink-0">
-          {thumbnail ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={thumbnail} alt="" className="h-full w-full rounded-2xl object-cover" />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center rounded-2xl bg-[var(--accent)] text-lg font-bold text-[var(--background)]">
-              {String(episode.number).padStart(2, "0")}
-            </div>
-          )}
-          {thumbnail && (
-            <div className="absolute -bottom-1.5 -left-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent)] text-[10px] font-bold text-[var(--background)] ring-2 ring-[var(--background)]">
-              {String(episode.number).padStart(2, "0")}
-            </div>
-          )}
-        </div>
-        <p className="text-[13px] text-[var(--muted-2)]">
-          {new Date(episode.date).toLocaleDateString("de-CH", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-          })}{" "}
-          · {episode.duration}
-        </p>
+      <div className="relative mt-6 overflow-hidden rounded-[20px]">
+        {thumbnail ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={thumbnail} alt="" className="aspect-video w-full object-cover" />
+        ) : (
+          <div className="flex aspect-video w-full items-center justify-center rounded-[20px] bg-[var(--accent)] text-4xl font-bold text-[var(--background)]">
+            {String(episode.number).padStart(2, "0")}
+          </div>
+        )}
+        {thumbnail && (
+          <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-sm font-bold text-[var(--background)] ring-2 ring-[var(--background)]">
+            {String(episode.number).padStart(2, "0")}
+          </div>
+        )}
       </div>
+      <p className="mt-4 text-[13px] text-[var(--muted-2)]">
+        {new Date(episode.date).toLocaleDateString("de-CH", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        })}{" "}
+        · {episode.duration}
+      </p>
 
       <h1 className="mt-5 text-[32px] font-bold leading-tight sm:text-[40px]">{episode.title}</h1>
 

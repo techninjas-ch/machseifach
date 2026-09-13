@@ -11,13 +11,13 @@ const anbieter = [
   {
     name: "PostFinance",
     typ: "Klassische Bank",
-    kosten: "CHF 5.–/Monat",
+    kosten: "CHF 5.–/Monat, für Neugründungen 2 Jahre gratis",
     fuer: "Einzelfirmen mit Schweizer Fokus, die Filialen und persönliche Beratung schätzen",
   },
   {
     name: "UBS",
     typ: "Klassische Bank",
-    kosten: "CHF 20.–/Quartal (≈ CHF 6.67.–/Monat), 1. Jahr oft gratis für Neugründungen",
+    kosten: "CHF 20.–/Quartal (≈ CHF 6.67.–/Monat), 1. Jahr gratis für Neugründungen",
     fuer: "KMU mit Wachstumsplänen, die eine grosse Bank im Rücken wollen",
   },
   {
@@ -77,8 +77,16 @@ const quellen = [
     href: "https://www.moneyland.ch/en/postfinance/company-accounts/business-account",
   },
   {
+    label: "PostFinance, „Startpaket für Firmengründer:innen und Start-ups“",
+    href: "https://www.postfinance.ch/en/business/company-type/founders-start-ups/start-up-package.html",
+  },
+  {
     label: "UBS Schweiz, „Geschäftskonto für Ihr KMU“",
     href: "https://www.ubs.com/ch/de/services/accounts-and-cards/corporate-accounts/business-account.html",
+  },
+  {
+    label: "UBS Schweiz, „Spezialangebot für Jungunternehmen“",
+    href: "https://www.ubs.com/ch/de/services/founding-and-succession/founding/young-company-offer.html",
   },
   {
     label: "Raiffeisen Schweiz, „Geschäftskonto eröffnen“",
@@ -184,14 +192,24 @@ export default function GeschaeftskontoVergleichSchweizPost() {
         </p>
         <p>
           <strong>UBS</strong> berechnet CHF 20 pro Quartal, umgerechnet rund CHF 6.67 pro Monat,
-          inklusive 500 elektronischer Inlandzahlungen pro Monat. Für frisch gegründete Firmen ist
-          das Geschäftskonto im ersten Jahr oft kostenlos.
+          inklusive 500 elektronischer Inlandzahlungen pro Monat.
         </p>
         <p>
           <strong>Raiffeisen</strong> veröffentlicht keine fixen Publikumspreise, die Konditionen
           hängen von der lokalen Genossenschaftsbank und den individuellen Bedürfnissen ab. Dafür
           gibt es eine persönliche Beratung vor Ort, was bei den beiden anderen Grossbanken nicht
           überall gleich ausgeprägt ist.
+        </p>
+        <p className="rounded-[16px] bg-[var(--surface)] p-5 text-base">
+          <strong>Startup-Bonus:</strong> Sowohl PostFinance als auch UBS haben ein eigenes
+          Startpaket für Neugründungen. Bei <strong>PostFinance</strong> ist die Kontoführung für
+          bis zu fünf Geschäftskonten <strong>zwei Jahre gratis</strong>, wenn die Firma nicht
+          länger als zwei Jahre zurückliegt, dazu kommt die Visa Business Card im ersten Jahr ohne
+          Gebühren. Bei <strong>UBS</strong> sind Geschäftskonto und Karte im{" "}
+          <strong>ersten Jahr kostenlos</strong>, inklusive Kapitaleinzahlungskonto für die
+          Gründung, Bedingung ist eine Firmengründung, die höchstens drei Jahre zurückliegt.
+          Raiffeisen kommuniziert keinen schweizweit einheitlichen Startup-Bonus, hier lohnt sich
+          eine Nachfrage bei der lokalen Bank direkt.
         </p>
 
         <h2 className="mt-10 mb-1 text-2xl font-bold">Digitale Geschäftskonten: Yapeal & Relio</h2>

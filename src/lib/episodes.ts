@@ -37,7 +37,7 @@ export function isPublished(episode: Episode): boolean {
 
 export const nextEpisode = {
   guestName: "Isabel Kohler",
-  date: "2026-09-23T15:15:00+02:00",
+  date: "2026-09-16T15:15:00+02:00",
 };
 
 const NADIA_GUEST: Guest = {
@@ -64,9 +64,9 @@ export const episodes: Episode[] = [
     slug: "12-isabel-kohler-starte-unperfekt",
     title:
       "Starte unperfekt: Isabel Kohler über ihren Weg von der virtuellen Assistenz zum eigenen Branding-Business",
-    date: "2026-09-23",
+    date: "2026-09-16",
     duration: "59 Min",
-    publishAt: "2026-09-23T15:15:00+02:00",
+    publishAt: "2026-09-16T15:15:00+02:00",
     description:
       "Isabel Kohler startete als virtuelle Assistentin und hat sich zur Branding- und Social-Media-Spezialistin für Selbstständige und KMU entwickelt. Über ihren Umweg via Flugbegleiterin, den Absprung aus einem belastenden Job dank einer Online-Challenge und warum bei ihr immer die Strategie vor der Kreativität kommt.",
     guest: {

@@ -65,8 +65,8 @@ export const episodes: Episode[] = [
     title:
       "Starte unperfekt: Isabel Kohler über ihren Weg von der virtuellen Assistenz zum eigenen Branding-Business",
     date: "2026-09-16",
-    duration: "59 Min",
-    publishAt: "2026-09-16T15:15:00+02:00",
+    duration: "52 Min",
+    spotifyUrl: "https://open.spotify.com/episode/6CKqABf2AsR55NqDcJkyxz",
     description:
       "Isabel Kohler startete als virtuelle Assistentin und hat sich zur Branding- und Social-Media-Spezialistin für Selbstständige und KMU entwickelt. Über ihren Umweg via Flugbegleiterin, den Absprung aus einem belastenden Job dank einer Online-Challenge und warum bei ihr immer die Strategie vor der Kreativität kommt.",
     guest: {

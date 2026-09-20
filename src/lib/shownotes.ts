@@ -2,6 +2,8 @@ import type { Episode } from "@/lib/episodes";
 
 const ABOUT_US_HTML = `<p><strong>Mehr über uns:</strong></p>
 
+<p>Mirjam und Patrick bauen mit Tech Ninjas Weblösungen und KI-gestützte Automatisierungen für Schweizer KMU, z.B. automatische Erstantworten oder intelligente Lead-Vorqualifizierung.</p>
+
 <p>
 <a href="https://www.machseifa.ch/">Mach’s eifach</a><br>
 <a href="https://www.instagram.com/machs.eifach/">Mach’s eifach auf Instagram</a><br>
@@ -19,6 +21,7 @@ export function buildShownotesHtml(episode: Episode): string {
       const links = episode.guest.links
         .map((link) => `<a href="${link.href}">${link.label}</a>`)
         .join("<br>\n");
+      parts.push(`<p><strong>Mehr über ${episode.guest.name} findest du hier:</strong></p>`);
       parts.push(`<p>\n${links}\n</p>`);
     }
   }

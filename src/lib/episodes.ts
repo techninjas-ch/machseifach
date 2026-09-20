@@ -46,6 +46,7 @@ const NICOLAS_GUEST: Guest = {
   bio: "Nicolas ist gelernter Informatiker und hat Multimedia Production studiert. Schon während der Ausbildung entwickelte er nebenbei Websites für Kundinnen und Kunden, bis er aus einem eigenen Bedürfnis heraus die Buchhaltungssoftware MILKEE baute. Seit Oktober 2022 führt er MILKEE als GmbH, unterstützt von rund fünf Freelancern.",
   links: [
     { label: "milkee.ch", href: "https://milkee.ch/" },
+    { label: "Instagram (MILKEE)", href: "https://www.instagram.com/milkee.ch/" },
     { label: "LinkedIn", href: "https://ch.linkedin.com/in/nicolas-haemmerli" },
   ],
 };
@@ -73,7 +74,7 @@ export const episodes: Episode[] = [
     number: 13,
     slug: "13-nicolas-haemmerli-milkee-vom-bedarf-zur-software",
     title:
-      "Vom eigenen Bedürfnis zur eigenen Software: Nicolas Hämmerli über die Entstehung von MILKEE (Teil 1)",
+      "Vom eigenen Problem zur eigenen Software: Nicolas Hämmerli über die Entstehung von MILKEE (Teil 1)",
     date: "2026-09-23",
     duration: "45 Min",
     publishAt: "2026-09-23T15:15:00+02:00",
@@ -81,10 +82,10 @@ export const episodes: Episode[] = [
       "Nicolas Hämmerli baute sich während des Studiums eine eigene Buchhaltungssoftware, weil er selbst keine passende fand, heute nutzen sie hunderte Selbstständige und kleine Firmen. Über seine Kindheit mit Minecraft-Servern, warum ihm die Angst vor Ideenklau fremd ist und wie aus einem persönlichen Bedürfnis das Buchhaltungstool MILKEE wurde.",
     guest: NICOLAS_GUEST,
     summary: [
-      "Nicolas interessierte sich schon als Kind fürs Programmieren, mit elf Jahren baute er eigene Minecraft-Server auf und stellte dabei die ersten eigenen Webseiten ins Netz. Über sein Umfeld rutschte er so nach und nach in bezahlte Website-Aufträge, zuerst für seine Lehrerin, dann für weitere Kundinnen und Kunden, während der Informatik-Lehre und später während des Studiums Multimedia Production. Vorgelebt hat ihm die Selbstständigkeit sein Vater, der schon lange eine eigene Firma führt.",
-      "Aus diesen Nebenjobs als Webentwickler entstand das Bedürfnis hinter MILKEE: Seine eigene Buchhaltung führte er in Excel und Word, bis er merkte, dass er daraus herausgewachsen war. Er fand am Markt nichts, das ihm einfach genug war, also programmierte er sich Ende 2021 kurzerhand ein eigenes Tool, stellte es als Landingpage online und schaltete Google Ads, um zu testen, ob überhaupt Interesse besteht. Als sich Leute registrierten und im Februar 2022 die erste Person 9 Franken pro Monat bezahlte, war für ihn klar: Das Problem lässt sich lösen. Im Oktober 2022 gründete er die MILKEE GmbH. Der Name stammt von der Schweizer Milchbüchlein-Rechnung, der einfachen Einnahmen-Ausgaben-Buchhaltung, mit der das Tool startete.",
-      "Vor Ideenklau hat er keine Angst: Die meisten Geschäftsideen gebe es in irgendeiner Form schon, entscheidend sei nicht die Idee, sondern die Umsetzung. Auch vor günstiger vibegecodeter Konkurrenz fürchtet er sich nicht sonderlich, weil Software für ihn ohnehin nie der schwierige Teil war, die eigentliche Herausforderung liegt in Distribution und Vertrieb. Neue Funktionen entwickelt er inzwischen mit Unterstützung von Claude Code, testet aber weiterhin jede Änderung manuell selbst, weil ihm die Qualitätssicherung zu wichtig ist, um sie vollständig an KI abzugeben. Die Infrastruktur bewusst simpel gehalten: MILKEE läuft auf einem einzigen Server bei einem Schweizer Hoster, die Kerndaten bleiben in der Schweiz.",
-      "Die Hauptfunktionen von MILKEE sind Buchhaltung, Rechnungsstellung und Zeiterfassung, ergänzt um Offerten- und Kontaktverwaltung. Entwickelt wird nach wie vor grösstenteils von Nicolas selbst, unterstützt von rund fünf Freelancern für Bereiche wie Support, Design und die sicherheitskritische Bankenanbindung.",
+      "Nicolas interessierte sich schon als Kind fürs Programmieren: Mit elf Jahren baute er eigene Minecraft-Server auf und stellte erste Webseiten ins Netz, was ihn in bezahlte Website-Aufträge rutschen liess, zuerst für seine Lehrerin, dann für weitere Kundinnen und Kunden während Lehre und Studium. Vorgelebt hat ihm die Selbstständigkeit sein Vater, der schon lange eine eigene Firma führt.",
+      "Aus diesen Nebenjobs entstand das Bedürfnis hinter MILKEE: Seine eigene Buchhaltung führte er in Excel und Word, bis er daraus herauswuchs. Weil er am Markt nichts Einfaches fand, programmierte er Ende 2021 ein eigenes Tool, stellte es als Landingpage online und schaltete Google Ads, um das Interesse zu testen. Im Februar 2022 zahlte die erste Person 9 Franken pro Monat, im Oktober 2022 gründete er die MILKEE GmbH. Der Name stammt von der Milchbüchlein-Rechnung, der einfachen Einnahmen-Ausgaben-Buchhaltung, mit der das Tool startete.",
+      "Software war für ihn nie der schwierige Teil, die eigentliche Herausforderung liegt in Distribution und Vertrieb. Neue Funktionen entwickelt er mit Unterstützung von Claude Code, testet aber weiterhin jede Änderung manuell, weil ihm Qualitätssicherung zu wichtig ist, um sie vollständig an KI abzugeben. Die Infrastruktur hält er simpel: MILKEE läuft auf einem einzigen Server bei einem Schweizer Hoster, die Kerndaten bleiben in der Schweiz.",
+      "Die Hauptfunktionen sind Buchhaltung, Rechnungsstellung und Zeiterfassung, ergänzt um Offerten- und Kontaktverwaltung. Entwickelt wird grösstenteils von Nicolas selbst, unterstützt von rund fünf Freelancern für Support, Design und die sicherheitskritische Bankenanbindung.",
     ],
     tips: [
       "Software ist selten der schwierige Teil: Die eigentliche Challenge bei einem eigenen Produkt liegt in der Distribution und im Vertrieb, nicht in der Technik.",

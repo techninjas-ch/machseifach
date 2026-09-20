@@ -96,13 +96,13 @@ export default async function Home() {
           </div>
           <h2 className="mt-1.5 text-[38px] font-bold">Jetzt reinhören</h2>
         </div>
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+        <div className="flex flex-col gap-7">
           {latest.map((ep) => (
             <div
               key={ep.number}
-              className="flex items-start gap-5 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-7"
+              className="flex flex-col items-start gap-5 rounded-[20px] border border-[var(--accent-soft)]/12 bg-[var(--surface)] p-7 sm:flex-row"
             >
-              <div className="relative h-20 w-36 shrink-0">
+              <div className="relative h-28 w-48 shrink-0 sm:h-36 sm:w-64">
                 {thumbnails[ep.number] ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

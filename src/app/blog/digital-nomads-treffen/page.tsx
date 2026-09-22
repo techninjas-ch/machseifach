@@ -1,12 +1,25 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import MediaCarousel from "@/components/MediaCarousel";
 
 export const metadata: Metadata = {
   title: "Manchmal sind die spontanen Entscheidungen einfach die besten – Mach's eifach",
   description:
     "Ein spontanes Wochenende beim Treffen der Digital Nomads Schweiz: neue Perspektiven, gute Gespräche und ein Barbecue am Strand, und warum genau solche Begegnungen einer der Gründe sind, weshalb es diesen Podcast gibt.",
 };
+
+const media = [
+  {
+    src: "/blog/digital-nomads-treffen/dinner.jpg",
+    alt: "Abendessen am Freitag beim Digital-Nomads-Treffen",
+    caption: "Aus «ein bisschen arbeiten» wurde am Freitagabend ziemlich wenig.",
+  },
+  {
+    src: "/blog/digital-nomads-treffen/strand.jpg",
+    alt: "Barbecue am Strand mit Sonnenuntergang beim Digital-Nomads-Treffen",
+    caption: "Barbecue am Strand, kurz vor Sonnenuntergang.",
+  },
+];
 
 export default function DigitalNomadsTreffenPost() {
   return (
@@ -33,6 +46,10 @@ export default function DigitalNomadsTreffenPost() {
 
       <p className="mt-4 text-[13px] text-[var(--muted-2)]">21. September 2026 · 3 Min. Lesezeit</p>
 
+      <div className="mx-auto mt-8 max-w-sm">
+        <MediaCarousel items={media} />
+      </div>
+
       <div className="mt-10 space-y-5 text-[17px] leading-relaxed text-[var(--foreground)]">
         <p>
           Menschen, die ähnlich ticken wie wir. Die Dinge ausprobieren, ihr eigenes Ding machen und
@@ -43,42 +60,10 @@ export default function DigitalNomadsTreffenPost() {
           wenig, weil die Gespräche und der Austausch einfach viel spannender waren. Neue
           Perspektiven, spannende Geschichten und richtig gute Begegnungen.
         </p>
-      </div>
-
-      <div className="mt-8 overflow-hidden rounded-[20px]">
-        <Image
-          src="/blog/digital-nomads-treffen/dinner.jpg"
-          alt="Abendessen am Freitag beim Digital-Nomads-Treffen"
-          width={1600}
-          height={1200}
-          className="w-full object-cover"
-        />
-      </div>
-      <p className="mt-2.5 text-[13px] text-[var(--muted-2)]">
-        Aus «ein bisschen arbeiten» wurde am Freitagabend ziemlich wenig.
-      </p>
-
-      <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-[var(--foreground)]">
         <p>
           Abends zusammen essen und am Samstag noch ein Barbecue am Strand. Musik, Lagerfeuer, gute
           Gespräche und einfach eine richtig schöne Stimmung. Was will man mehr?
         </p>
-      </div>
-
-      <div className="mt-8 overflow-hidden rounded-[20px]">
-        <Image
-          src="/blog/digital-nomads-treffen/strand.jpg"
-          alt="Barbecue am Strand mit Sonnenuntergang beim Digital-Nomads-Treffen"
-          width={1600}
-          height={1200}
-          className="w-full object-cover"
-        />
-      </div>
-      <p className="mt-2.5 text-[13px] text-[var(--muted-2)]">
-        Barbecue am Strand, kurz vor Sonnenuntergang.
-      </p>
-
-      <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-[var(--foreground)]">
         <p>
           Und genau solche Begegnungen sind auch einer der Gründe, weshalb wir unseren Podcast
           «Mach's eifach» gestartet haben. Um uns mit Gleichgesinnten zu verbinden. Um spannende

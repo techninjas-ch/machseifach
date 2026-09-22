@@ -8,16 +8,18 @@ export const metadata: Metadata = {
     "Ein spontanes Wochenende beim Treffen der Digital Nomads Schweiz: neue Perspektiven, gute Gespräche und ein Barbecue am Strand, und warum genau solche Begegnungen einer der Gründe sind, weshalb es diesen Podcast gibt.",
 };
 
+const INSTAGRAM_POST_URL = "https://www.instagram.com/p/DdihLLxjhTP/";
+
 const media = [
-  {
-    src: "/blog/digital-nomads-treffen/dinner.jpg",
-    alt: "Abendessen am Freitag beim Digital-Nomads-Treffen",
-    caption: "Aus «ein bisschen arbeiten» wurde am Freitagabend ziemlich wenig.",
-  },
   {
     src: "/blog/digital-nomads-treffen/strand.jpg",
     alt: "Barbecue am Strand mit Sonnenuntergang beim Digital-Nomads-Treffen",
     caption: "Barbecue am Strand, kurz vor Sonnenuntergang.",
+  },
+  {
+    src: "/blog/digital-nomads-treffen/dinner.jpg",
+    alt: "Abendessen am Freitag beim Digital-Nomads-Treffen",
+    caption: "Aus «ein bisschen arbeiten» wurde am Freitagabend ziemlich wenig.",
   },
 ];
 
@@ -48,6 +50,14 @@ export default function DigitalNomadsTreffenPost() {
 
       <div className="mx-auto mt-8 max-w-sm">
         <MediaCarousel items={media} />
+        <a
+          href={INSTAGRAM_POST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)] hover:text-[var(--accent-dark)]"
+        >
+          Original auf Instagram ansehen →
+        </a>
       </div>
 
       <div className="mt-10 space-y-5 text-[17px] leading-relaxed text-[var(--foreground)]">

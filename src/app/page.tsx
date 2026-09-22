@@ -16,6 +16,11 @@ export default async function Home() {
       latest.map(async (ep) => [ep.number, ep.spotifyUrl ? await spotifyThumbnailUrl(ep.spotifyUrl) : null]),
     ),
   );
+  // Prefer the newest episode that already has a Spotify photo (a brand-new
+  // episode often doesn't have one yet for the first day or two), so the
+  // hero shows a real face instead of falling back to the logo too eagerly.
+  const currentEpisode = latest.find((ep) => thumbnails[ep.number]) ?? latest[0];
+  const heroThumbnail = currentEpisode ? thumbnails[currentEpisode.number] : null;
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -57,10 +62,26 @@ export default async function Home() {
           </div>
         </div>
         <div className="relative">
-          <div className="float-slow absolute -inset-4.5 rounded-full bg-[radial-gradient(circle,rgba(76,90,58,0.14),transparent_70%)]" />
-          <div className="relative mx-auto aspect-square w-full max-w-[420px] overflow-hidden rounded-full shadow-[0_30px_60px_-20px_rgba(58,69,48,0.4)]">
-            <Image src="/podcast-logo.png" alt="Mach's eifach Podcast" fill className="object-cover" priority />
-          </div>
+          <div className="float-slow absolute -inset-4.5 rounded-[40px] bg-[radial-gradient(circle,rgba(76,90,58,0.14),transparent_70%)]" />
+          {currentEpisode && heroThumbnail ? (
+            <Link
+              href={`/episoden/${currentEpisode.slug}`}
+              className="group relative mx-auto block aspect-[4/3] w-full max-w-[480px]"
+            >
+              <div className="h-full w-full overflow-hidden rounded-[28px] shadow-[0_30px_60px_-20px_rgba(58,69,48,0.4)] transition-transform group-hover:scale-[1.02]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={heroThumbnail} alt="" className="h-full w-full object-cover" />
+              </div>
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[var(--background)] px-4 py-2 text-[13px] font-semibold whitespace-nowrap text-[var(--foreground)] shadow-[0_10px_25px_-8px_rgba(58,69,48,0.5)]">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
+                Aktuelle Folge{currentEpisode.guest ? ` · ${currentEpisode.guest.name}` : ""}
+              </div>
+            </Link>
+          ) : (
+            <div className="relative mx-auto aspect-square w-full max-w-[420px] overflow-hidden rounded-full shadow-[0_30px_60px_-20px_rgba(58,69,48,0.4)]">
+              <Image src="/podcast-logo.png" alt="Mach's eifach Podcast" fill className="object-cover" priority />
+            </div>
+          )}
         </div>
       </div>
 

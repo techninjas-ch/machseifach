@@ -8,6 +8,14 @@ export type BlogPostMeta = {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "digital-nomads-treffen",
+    title: "Manchmal sind die spontanen Entscheidungen einfach die besten",
+    excerpt:
+      "Ein spontanes Wochenende beim Treffen der Digital Nomads Schweiz: neue Perspektiven, gute Gespräche und ein Barbecue am Strand, und warum genau solche Begegnungen einer der Gründe sind, weshalb es diesen Podcast gibt.",
+    date: "2026-09-21",
+    readingTime: "3 Min.",
+  },
+  {
     slug: "buchhaltung-selbstaendige-kmu",
     title: "Buchhaltung für Selbständige und KMU: Pflicht, Tools und wann sich ein Treuhänder lohnt",
     excerpt:

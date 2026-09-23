@@ -78,6 +78,7 @@ export const episodes: Episode[] = [
     date: "2026-09-23",
     duration: "45 Min",
     publishAt: "2026-09-23T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/1CZPK22ze407AzcKF0leUt",
     description:
       "Nicolas Hämmerli baute sich während des Studiums eine eigene Buchhaltungssoftware, weil er selbst keine passende fand, heute nutzen sie hunderte Selbstständige und kleine Firmen. Über seine Kindheit mit Minecraft-Servern, warum ihm die Angst vor Ideenklau fremd ist und wie aus einem persönlichen Bedürfnis das Buchhaltungstool MILKEE wurde.",
     guest: NICOLAS_GUEST,

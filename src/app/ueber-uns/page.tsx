@@ -23,7 +23,7 @@ const hosts = [
     name: "Mirjam Gämperli",
     responsibility: "Struktur, Details & die guten Fragen",
     image: "/mirjam-portrait.webp",
-    imageClass: "object-cover",
+    imageClass: "object-cover object-top",
     imageWrapperClass: "",
     paragraphs: [
       "Mirjam hat ihren eigenen Weg genommen: vom Sportgymnasium über ein Lebensmitteltechnologie-Studium bis zu einem Sprachaufenthalt in Australien, bevor sie den Schritt in die Selbstständigkeit gewagt hat.",
@@ -44,7 +44,7 @@ const hosts = [
     name: "Patrick Christen",
     responsibility: "Technik & Umsetzung",
     image: "/patrick-portrait.webp",
-    imageClass: "object-cover",
+    imageClass: "object-cover object-top",
     imageWrapperClass: "",
     paragraphs: [
       "Patrick wollte ursprünglich alles andere, als den ganzen Tag vor einem Computer zu sitzen. Über den Umweg als Automatiker landete er schliesslich in der Softwareentwicklung und ist seit über zehn Jahren dabei.",

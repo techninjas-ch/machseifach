@@ -182,7 +182,7 @@ export default async function Home() {
                 alt="Mirjam"
                 width={160}
                 height={160}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
             </div>
             <div className="h-32 w-32 overflow-hidden rounded-full border-4 border-[var(--background)]/15 sm:h-40 sm:w-40">
@@ -191,7 +191,7 @@ export default async function Home() {
                 alt="Patrick"
                 width={160}
                 height={160}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
             </div>
           </div>

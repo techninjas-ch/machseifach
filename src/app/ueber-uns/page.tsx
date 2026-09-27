@@ -20,11 +20,11 @@ const linkClass =
 
 const hosts = [
   {
-    name: "Mirjam",
+    name: "Mirjam Gämperli",
     responsibility: "Struktur, Details & die guten Fragen",
-    image: "/mirjam.png",
-    imageClass: "object-contain translate-x-2",
-    imageWrapperClass: "bg-black/5",
+    image: "/mirjam-portrait.webp",
+    imageClass: "object-cover",
+    imageWrapperClass: "",
     paragraphs: [
       "Mirjam hat ihren eigenen Weg genommen: vom Sportgymnasium über ein Lebensmitteltechnologie-Studium bis zu einem Sprachaufenthalt in Australien, bevor sie den Schritt in die Selbstständigkeit gewagt hat.",
       "Durch ihre Erfahrung im Projektmanagement und in der Leitung eines Technikteams weiss sie, was es braucht, damit aus einer Idee auch wirklich etwas wird. Genau diesen Blick bringt sie auch in den Podcast ein.",
@@ -41,9 +41,9 @@ const hosts = [
     ],
   },
   {
-    name: "Patrick",
+    name: "Patrick Christen",
     responsibility: "Technik & Umsetzung",
-    image: "/patrick.jpg",
+    image: "/patrick-portrait.webp",
     imageClass: "object-cover",
     imageWrapperClass: "",
     paragraphs: [

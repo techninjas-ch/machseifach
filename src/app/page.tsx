@@ -176,18 +176,18 @@ export default async function Home() {
       <div className="bg-[var(--accent)] px-6 py-24">
         <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-14 md:grid-cols-[0.8fr_1.2fr]">
           <div className="flex justify-center gap-4">
-            <div className="h-32 w-32 overflow-hidden rounded-full border-4 border-[var(--background)]/15 bg-black/10 sm:h-40 sm:w-40">
+            <div className="h-32 w-32 overflow-hidden rounded-full border-4 border-[var(--background)]/15 sm:h-40 sm:w-40">
               <Image
-                src="/mirjam.png"
+                src="/mirjam-portrait.webp"
                 alt="Mirjam"
                 width={160}
                 height={160}
-                className="h-full w-full translate-x-1 object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="h-32 w-32 overflow-hidden rounded-full border-4 border-[var(--background)]/15 sm:h-40 sm:w-40">
               <Image
-                src="/patrick.jpg"
+                src="/patrick-portrait.webp"
                 alt="Patrick"
                 width={160}
                 height={160}

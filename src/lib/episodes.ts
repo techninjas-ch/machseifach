@@ -18,6 +18,8 @@ export type Episode = {
   duration: string;
   description: string;
   spotifyUrl?: string;
+  /** Local image path (in /public) that overrides the Spotify thumbnail. */
+  image?: string;
   guest?: Guest;
   host?: HostLinks;
   summary?: string[];
@@ -37,7 +39,7 @@ export function isPublished(episode: Episode): boolean {
 
 export const nextEpisode = {
   guestName: "Nicolas Hämmerli",
-  date: "2026-09-23T15:15:00+02:00",
+  date: "2026-09-30T15:15:00+02:00",
 };
 
 const NICOLAS_GUEST: Guest = {
@@ -70,6 +72,31 @@ const NADIA_GUEST: Guest = {
 };
 
 export const episodes: Episode[] = [
+  {
+    number: 14,
+    slug: "14-nicolas-haemmerli-milkee-preise-und-durchhalten",
+    title:
+      "Preise, Durchhalten und der Alltag als Gründer: Nicolas Hämmerli über MILKEE (Teil 2)",
+    date: "2026-09-30",
+    duration: "40 Min",
+    publishAt: "2026-09-30T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/2OuVBPrgQJlp556LDoGYD5",
+    image: "/episoden/14-nicolas-teil2.jpg",
+    description:
+      "Teil 2: Nicolas Hämmerli erzählt, warum ein eigenes Softwareprodukt alles andere als passives Einkommen ist, wie er trotz 900 Franken Monatsumsatz drangeblieben ist und warum er die Preise von MILKEE im Dezember bewusst erhöht hat.",
+    guest: NICOLAS_GUEST,
+    summary: [
+      "Nicolas war nie Vollzeit-Freelancer, sieht aber klare Unterschiede zum Softwareprodukt: Beim Freelancen läuft vieles über Netzwerk und Branding, beim Produkt spricht er eine grössere Zielgruppe an, mit ganz anderem Pricing. Anfangs hielt er ein eigenes Produkt für passives Einkommen, heute nennt er es «sehr aktives Einkommen». Ohne Support und neue Features würden die meisten Kundinnen und Kunden wohl noch ein bis drei Jahre bleiben, danach überholen einen die Funktionen der Konkurrenz.",
+      "Die erste Version programmierte er in etwa einer Woche, einen Monat später zahlte die erste Person 9 Franken. 2022 lag der Monatsumsatz noch bei wenigen hundert Franken, trotzdem blieb er dran, weil er positives Feedback bekam und die Distribution für ein lösbares Problem hielt. Ein Vorteil beim Wechsel der Buchhaltungssoftware: Wer einmal zufrieden ist, wechselt selten, ähnlich wie bei World of Warcraft, wo man nach einer Pause den Progress verliert.",
+      "Die Zielgruppe wuchs von Selbstständigen auf GmbHs, seit MILKEE auch doppelte Buchhaltung und Lohnbuchhaltung kann. Einen Avatar oder Businessplan hat Nicolas nie erstellt, das Produkt grenzte die Nische mit rund 346'000 potenziellen Kundinnen und Kunden von selbst ein. Beim Marketing setzt er weiter auf Google Ads (etwa Break-even) und viele Empfehlungen, Social Media läuft langsam an, während die Google-Suche wegen KI-Übersichten an Bedeutung verliert.",
+      "Im Dezember erhöhte er die Preise auf ein Niveau, das er langfristig tragen kann, statt mit der Konkurrenz in einen Preiskampf zu gehen. Bestehende Kundschaft behält ihren Preis, die Conversion-Rate wurde eher besser. Das mittlere von drei Paketen bringt den meisten Umsatz, Jahresabos sind 15 bis 16 Prozent günstiger. Sein Rat zum Schluss: einfach ins Machen kommen und wenn möglich neben dem Job starten.",
+    ],
+    tips: [
+      "Verlang faire Preise: Wer sich zu günstig verkauft, kann sein Angebot langfristig nicht tragen. Externe Hilfe beim Pricing kann helfen, weil man selbst oft zu tief drinsteckt.",
+      "Dranbleiben lohnt sich, wenn das Feedback stimmt: Nicolas machte 2022 wenig Umsatz, machte aber weiter, weil die ersten Nutzerinnen und Nutzer begeistert waren.",
+      "Komm ins Machen: Starte wenn möglich neben dem Job, sammle erste Erfahrungen und finde so schnell heraus, ob es funktioniert.",
+    ],
+  },
   {
     number: 13,
     slug: "13-nicolas-haemmerli-milkee-vom-bedarf-zur-software",

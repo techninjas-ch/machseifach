@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { episodes, isPublished } from "@/lib/episodes";
-import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms, spotifyThumbnailUrl } from "@/lib/platforms";
+import { SPOTIFY_URL, APPLE_URL, YOUTUBE_URL, platforms, episodeThumbnailUrl } from "@/lib/platforms";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 import CurrentEpisodeSpotlight from "@/components/CurrentEpisodeSpotlight";
 
@@ -13,7 +13,7 @@ export default async function Home() {
   const latest = episodes.filter(isPublished).slice(0, 3);
   const thumbnails = Object.fromEntries(
     await Promise.all(
-      latest.map(async (ep) => [ep.number, ep.spotifyUrl ? await spotifyThumbnailUrl(ep.spotifyUrl) : null]),
+      latest.map(async (ep) => [ep.number, await episodeThumbnailUrl(ep)]),
     ),
   );
   // Prefer the newest episode that already has a Spotify photo (a brand-new

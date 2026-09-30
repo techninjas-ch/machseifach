@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { episodes, isPublished } from "@/lib/episodes";
-import { spotifyEmbedUrl, spotifyThumbnailUrl } from "@/lib/platforms";
+import { spotifyEmbedUrl, episodeThumbnailUrl } from "@/lib/platforms";
 import { buildShownotesHtml } from "@/lib/shownotes";
 import ShareButton from "@/components/ShareButton";
 import CopyShownotesButton from "@/components/CopyShownotesButton";
@@ -41,7 +41,7 @@ export default async function EpisodeDetailPage({
   const { slug } = await params;
   const episode = findEpisode(slug);
   if (!episode || !isPublished(episode)) notFound();
-  const thumbnail = episode.spotifyUrl ? await spotifyThumbnailUrl(episode.spotifyUrl) : null;
+  const thumbnail = await episodeThumbnailUrl(episode);
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-20">

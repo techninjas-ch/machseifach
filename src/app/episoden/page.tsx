@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { episodes, isPublished } from "@/lib/episodes";
-import { spotifyThumbnailUrl } from "@/lib/platforms";
+import { episodeThumbnailUrl } from "@/lib/platforms";
 import NextEpisodeTeaser from "@/components/NextEpisodeTeaser";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default async function EpisodenPage() {
     await Promise.all(
       publishedEpisodes.map(async (ep) => [
         ep.number,
-        ep.spotifyUrl ? await spotifyThumbnailUrl(ep.spotifyUrl) : null,
+        await episodeThumbnailUrl(ep),
       ]),
     ),
   );

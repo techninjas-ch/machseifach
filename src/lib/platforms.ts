@@ -1,3 +1,5 @@
+import type { Episode } from "@/lib/episodes";
+
 export const SPOTIFY_URL =
   "https://open.spotify.com/show/033K5h0HiNPgNyijXum1YZ?si=dce4e86142164da7";
 export const APPLE_URL = "https://podcasts.apple.com/ch/podcast/machs-eifach/id6788845027";
@@ -32,4 +34,9 @@ export async function spotifyThumbnailUrl(episodeUrl: string): Promise<string | 
   } catch {
     return null;
   }
+}
+
+export async function episodeThumbnailUrl(episode: Episode): Promise<string | null> {
+  if (episode.image) return episode.image;
+  return episode.spotifyUrl ? spotifyThumbnailUrl(episode.spotifyUrl) : null;
 }

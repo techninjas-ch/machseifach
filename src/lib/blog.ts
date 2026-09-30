@@ -8,6 +8,14 @@ export type BlogPostMeta = {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    slug: "weltreise-brasilien-rueckblick",
+    title: "Bevor es bald wieder losgeht: unser Rückblick auf Brasilien",
+    excerpt:
+      "Von November 2024 bis Ende Mai 2025 waren wir auf Weltreise. Ein paar Highlights aus unserem ersten Land: Rio de Janeiro, die Copacabana, ein Beachvolleyball-Weltstar und die Wasserfälle von Foz do Iguaçu.",
+    date: "2026-09-28",
+    readingTime: "4 Min.",
+  },
+  {
     slug: "digital-nomads-treffen",
     title: "Manchmal sind die spontanen Entscheidungen einfach die besten",
     excerpt:

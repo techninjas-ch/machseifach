@@ -73,6 +73,28 @@ const NADIA_GUEST: Guest = {
 
 export const episodes: Episode[] = [
   {
+    number: 15,
+    slug: "15-mirjam-patrick-update-biel-und-thailand",
+    title: "Vom Housesitting in Biel nach Thailand: Unser Update zur 15. Folge",
+    date: "2026-10-07",
+    duration: "27 Min",
+    publishAt: "2026-10-07T15:15:00+02:00",
+    spotifyUrl: "https://open.spotify.com/episode/5IWrfZL21TJEd4g07wxGn9",
+    description:
+      "Unser Update zur 15. Folge: Die letzten Tage als Housesitter in Biel, Patricks erster Monat als voll Selbstständiger, zwei Treffen von Gleichgesinnten und was uns ab dem 20. Oktober in Thailand erwartet.",
+    summary: [
+      "Eigentlich war das nächste Update erst für Folge 20 angekündigt, jetzt sind wir schon bei Folge 15, weil bei uns so viel läuft. Neu ist der Plan, alle vier bis fünf Folgen ein Update zu machen. Das hat nichts mit fehlenden Gästen zu tun: Aufnahmen und Interessenten haben wir genug. Aktuell sind wir noch in Biel und blicken auf unser Housesitting zurück: eine ruhige Lage am Stadtrand mit Wald, Vita-Parcours und See, fast immer über 20 Grad und eine pflegeleichte Katze namens Pitschi. Beide würden wieder Housesitting machen, am besten mit Katzen oder kleinen Hunden, bei exotischen Tieren eher nicht.",
+      "Für Patrick war es der erste Monat als voll Selbstständiger. Sein Arbeitsrhythmus ist ähnlich geblieben, aber mit deutlich weniger Meetings und mehr Arbeit ohne Unterbruch, dazu fühlt er sich motivierter, weil er für eigene Kundschaft arbeitet. Er fragt sich, warum er das nicht früher gemacht hat. Die Firma bleibt in der Schweiz angemeldet, Steuern und Abgaben ebenfalls, dafür konnten wir die Fixkosten senken und spüren weniger Druck. Wichtig ist uns, lieber gute Arbeit mit Qualität zu liefern, als jede Anfrage innert zwei Minuten zu beantworten, auch über Zeitzonen hinweg.",
+      "Ein Highlight war der spontane Ausflug zum Treffen der Digital Nomads Schweiz. Wir kamen mit zwei Rucksäcken, erzählten von unserem Weg und wurden von Anfang an herzlich aufgenommen, ohne uns erklären oder rechtfertigen zu müssen. Spannend waren die Gespräche mit Leuten, die seit 20 oder 30 Jahren ihr eigenes Ding machen, dazu gab es gemeinsames Essen, Lagerfeuer, Grillieren, Musik und Gitarre am Strand. Beim Padel-Business-Treff war die Stimmung dagegen kühler und strukturierter, trotz netter Leute fühlten wir uns eher als Exoten. Trotzdem sind kleine Netzwerk-Events rund um einen Sport ein guter Weg, um Gleichgesinnte zu treffen.",
+      "Als Nächstes geht es am 20. Oktober nach Bangkok und weiter nach Phuket, wo wir für einen Monat ein Apartment mit Fitness und Pool in Strandnähe haben. Mirjam hat noch eine Woche, bis ihr letzter Arbeitstag aus der Schweiz ansteht, danach folgen ein paar freie Tage. Wir freuen uns auf Wärme, Meer und gutes Essen, sind aber gespannt, wie das Arbeiten und der Podcast mit dem Internet dort klappen. Das nächste Update kommt voraussichtlich aus Thailand.",
+    ],
+    tips: [
+      "Wer immer am gleichen Ort lebt, sieht oft nur das, was ihn ständig umgibt: Wechselnde Orte zeigen, wie schön es auch in anderen Regionen ist.",
+      "Such dir Gleichgesinnte: Unter Selbstständigen musst du deinen Weg nicht erklären oder rechtfertigen, und aus den Gesprächen nimmst du viele Inputs mit.",
+      "Selbstständig heisst nicht, immer sofort zu antworten: Gute Arbeit mit Qualität ist mehr wert als eine Antwort innert zwei Minuten, und mit klarer Kommunikation klappt es auch über Zeitzonen hinweg.",
+    ],
+  },
+  {
     number: 14,
     slug: "14-nicolas-haemmerli-milkee-preise-und-durchhalten",
     title:

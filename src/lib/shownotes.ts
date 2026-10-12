@@ -26,6 +26,14 @@ export function buildShownotesHtml(episode: Episode): string {
     }
   }
 
+  if (episode.resources && episode.resources.length > 0) {
+    const links = episode.resources
+      .map((link) => `<a href="${link.href}">${link.label}</a>`)
+      .join("<br>\n");
+    parts.push(`<p><strong>Links zur Folge:</strong></p>`);
+    parts.push(`<p>\n${links}\n</p>`);
+  }
+
   if (episode.host) {
     const links = episode.host.links
       .map((link) => `<a href="${link.href}">${link.label}</a>`)

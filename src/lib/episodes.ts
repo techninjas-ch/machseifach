@@ -23,6 +23,8 @@ export type Episode = {
   guest?: Guest;
   host?: HostLinks;
   summary?: string[];
+  /** Additional links mentioned in the episode (books, articles, studies). */
+  resources?: { label: string; href: string }[];
   tips?: string[];
   /** ISO datetime (with timezone offset) before which this episode stays hidden site-wide. */
   publishAt?: string;
@@ -38,8 +40,8 @@ export function isPublished(episode: Episode): boolean {
 }
 
 export const nextEpisode = {
-  guestName: "Nicolas Hämmerli",
-  date: "2026-09-30T15:15:00+02:00",
+  guestName: "Heike Burch",
+  date: "2026-10-14T15:15:00+02:00",
 };
 
 const NICOLAS_GUEST: Guest = {
@@ -50,6 +52,16 @@ const NICOLAS_GUEST: Guest = {
     { label: "milkee.ch", href: "https://milkee.ch/" },
     { label: "Instagram (MILKEE)", href: "https://www.instagram.com/milkee.ch/" },
     { label: "LinkedIn", href: "https://ch.linkedin.com/in/nicolas-haemmerli" },
+  ],
+};
+
+const HEIKE_GUEST: Guest = {
+  name: "Heike Burch",
+  role: "InDesign-Templates & Publishing, MOLIRI",
+  bio: "Heike ist in Ostdeutschland aufgewachsen, lernte in der DDR Damenmassschneiderin und wechselte nach dem Mauerfall in die Mediengestaltung. Seit über 30 Jahren ist sie selbstständig, layoutet Bücher und Magazine, erstellt InDesign-Templates für Verlage und Agenturen und gibt Seminare. Seit Sommer 2020 ist sie mit ihrem Mann als ortsunabhängig Arbeitende im Camper in Europa unterwegs.",
+  links: [
+    { label: "moliri.ch", href: "https://moliri.ch/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/heike-burch/" },
   ],
 };
 
@@ -72,6 +84,60 @@ const NADIA_GUEST: Guest = {
 };
 
 export const episodes: Episode[] = [
+  {
+    number: 17,
+    slug: "17-heike-burch-mut-gibt-es-nur-im-rueckblick",
+    title:
+      "Mut gibt es nur im Rückblick: Heike Burch über Zufriedenheit, Geld und das Leben im Camper (Teil 2)",
+    date: "2026-10-21",
+    duration: "55 Min",
+    publishAt: "2026-10-21T15:15:00+02:00",
+    image: "/episoden/16-17-heike-burch.jpg",
+    description:
+      "Teil 2: Heike Burch erzählt, warum sie keine Abenteurerin ist, wie das Leben im Camper funktioniert und warum Mut für sie nur im Rückblick existiert. Dazu: was ein gutes Leben im Alter ausmacht, ihr 40-Prozent-Spartrick und wie sie sichtbar bleibt.",
+    guest: HEIKE_GUEST,
+    summary: [
+      "Heike und ihr Mann merkten schnell, dass Zelten und Wildcampen nicht zu ihnen passen: Sie übernachteten erst in Hotels und Airbnbs, heute leben sie im Camper, der Büro, Küche und Schlafplatz auf wenigen Quadratmetern vereint. Eine Wohnung zu kündigen ist für sie weniger folgenschwer als die Verantwortung für ein Kind, und Mut gibt es für sie vor allem im Rückblick.",
+      "Heike beschäftigt sich damit, was ein zufriedenes Leben im Alter ausmacht, und stiess dabei immer wieder auf Beziehungen als wichtigsten Faktor (siehe Links). Beim Aufschreiben der Menschen, die sie gern hat, landeten 80 Prozent in der Schweiz, deshalb haben sie eine barrierefreie Wohnung gekauft. Trotzdem geht es im Januar oder Februar wieder mit dem Camper in den Süden.",
+      "Aus sechs Jahren Reisen zieht sie ein Fazit: Die herzlichsten Menschen traf sie im Iran. Ihre Tipps für alle, die ortsunabhängig arbeiten wollen: mit Kundschaft und Arbeitgebern klären, ob der Job mobil geht, Kosten tief halten, Routinen aufbauen und zwei bis drei Monate Reserve haben. Ihr Erfolgsfaktor: Von jeder Rechnung gehen rund 40 Prozent aufs Sparkonto, für Steuern, Umsatzsteuer und AHV.",
+      "Beim Thema Sichtbarkeit setzt Heike auf Beziehungen und darauf, erst zu geben und dann zu nehmen: mit einem Podcast in der Publishing-Branche, Vorträgen in einer eigenen User Group und Gratis-Wissen. Der 16-jährigen Heike würde sie raten, weniger auf die Meinung anderer zu geben, und zum Schluss nimmt sie «Mach's eifach» gleich als Lebensmotto mit.",
+    ],
+    resources: [
+      { label: "Buch «The Good Life»", href: "https://www.buch7.de/produkt/the-good-life-und-wie-es-gelingen-kann-robert-waldinger/1046632403" },
+      { label: "Harvard-Studie", href: "https://www.adultdevelopmentstudy.org/" },
+      { label: "ZEIT-Artikel zur Studie", href: "https://www.zeit.de/zeit-magazin/leben/2024-12/harvard-studie-glueck-gesundheit-mark-waldinger" },
+      { label: "Reisetagebuch (Anmeldung nötig)", href: "https://www.leben-pur.ch/das-gute-leben-wie-soll-das-gelingen/" },
+    ],
+    tips: [
+      "Frag Kundschaft und Arbeitgeber, ob dein Job auch mobil möglich ist, bevor du grosse Pläne machst: Oft geht mehr, als man denkt.",
+      "Leg von jeder Rechnung rund 40 Prozent direkt aufs Sparkonto, damit Steuern, Umsatzsteuer und AHV bezahlt sind.",
+      "Erlaub dir Fehler und ändere ruhig deine Meinung: Mut sieht man oft erst im Rückblick.",
+    ],
+  },
+  {
+    number: 16,
+    slug: "16-heike-burch-lebensqualitaet-als-kompass",
+    title:
+      "Lebensqualität als Kompass: Heike Burch über 30 Jahre Selbstständigkeit und ihr ortsunabhängiges Leben (Teil 1)",
+    date: "2026-10-14",
+    duration: "55 Min",
+    publishAt: "2026-10-14T15:15:00+02:00",
+    image: "/episoden/16-17-heike-burch.jpg",
+    description:
+      "Heike Burch ist seit über 30 Jahren selbstständig und seit 2020 mit ihrem Mann im Camper unterwegs. Über ihren Weg von der Damenmassschneiderin in der DDR in die Mediengestaltung, warum Lebensqualität ihr Mass für Erfolg ist und wie der Tod eines Kollegen kurz vor der Pensionierung den Anstoss zur grossen Reise gab.",
+    guest: HEIKE_GUEST,
+    summary: [
+      "Heike wuchs in Ostdeutschland auf und lernte in der DDR Damenmassschneiderin. Nach dem Mauerfall konnte sie noch einmal neu starten und wurde Mediengestalterin. Selbstständig machte sie sich früh: Ihr erster Kunde wollte eine Rechnung, also liess sie sich das vom Steuerberater des Kunden erklären. Eine Anstellung in der Schweiz nach 2011 passte nicht zu ihr. Heute layoutet sie Bücher und Magazine, erstellt InDesign-Templates und begleitet Kundschaft bei Softwareumstellungen.",
+      "Ihr Lebensmotto heisst Lebensqualität, und jede berufliche Entscheidung muss dazu passen: Heike arbeitet nur noch drei Tage pro Woche und nimmt Projekte an, die ihr Freude machen. Die Projekte sind dadurch besser und pünktlicher bezahlt geworden. Beziehungen sind für sie im Business das Allerwichtigste, ohne Trennung von Privatem und ohne verbrannte Erde. Erfolg bedeutet für sie weniger Geld als gute Entscheidungen und einen Monat, der Lebensqualität gebracht hat.",
+      "Geld ist ihr wichtig, weil es Ruhe gibt, und der grösste Luxus ist für sie, keine Termine zu haben. Sie gibt gern Geld für Qualität aus, etwa für Camper, Rechner und ihre Stricknadeln, aber nicht für Status. Im Lotto-Fall würde sie wohl weiterarbeiten und vielleicht eine Stiftung gründen.",
+      "Den Anstoss zur grossen Reise gab ein älterer Kollege, der drei Wochen vor der Pensionierung starb, obwohl er von seiner Weltreise geträumt hatte. Heike und ihr Mann planten lange, legten eine Mindestsumme zur Seite, warteten, bis der Sohn die Lehre beendet hatte, und kündigten die Wohnung. Dann kam Corona, und plötzlich war Homeoffice für ihre Kundschaft kein Problem mehr. Sie starteten mit zwei Motorrädern, nach einem Jahr kauften sie den Camper. Ihr Sohn hätte sich mehr Nähe gewünscht, heute würde Heike ihn fragen, ob er mitkommt.",
+    ],
+    tips: [
+      "Richte berufliche Entscheidungen an deiner Lebensqualität aus: Wer nur noch Projekte annimmt, die Freude machen, bekommt oft bessere Projekte und bessere Honorare.",
+      "Beziehungen sind das Wichtigste im Business: Hinterlass keine verbrannte Erde, bleib im Kontakt und trenne Geschäftliches nicht strikt von Privatem.",
+      "Schieb deine grossen Pläne nicht ewig auf: Der Kollege, der kurz vor der Pensionierung starb, war für Heike der Weckruf, ihre Reise endlich umzusetzen.",
+    ],
+  },
   {
     number: 15,
     slug: "15-mirjam-patrick-update-biel-und-thailand",

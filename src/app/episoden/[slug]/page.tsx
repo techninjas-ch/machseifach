@@ -171,6 +171,29 @@ export default async function EpisodeDetailPage({
         </div>
       )}
 
+      {episode.resources && episode.resources.length > 0 && (
+        <div className="mt-14">
+          <div className="font-[family-name:var(--font-caveat)] text-[26px] font-bold text-[var(--accent-soft)]">
+            Zum Weiterlesen
+          </div>
+          <h2 className="mt-1 mb-5 text-2xl font-bold">Links zur Folge</h2>
+          <ul className="space-y-2.5">
+            {episode.resources.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[var(--accent)] underline decoration-[var(--accent)]/30 underline-offset-4 hover:text-[var(--accent-dark)]"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {episode.tips && (
         <div className="mt-14">
           <div className="font-[family-name:var(--font-caveat)] text-[26px] font-bold text-[var(--accent-soft)]">

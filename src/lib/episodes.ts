@@ -92,7 +92,7 @@ export const episodes: Episode[] = [
     date: "2026-10-21",
     duration: "55 Min",
     publishAt: "2026-10-21T15:15:00+02:00",
-    image: "/episoden/16-17-heike-burch.jpg",
+    image: "/episoden/17-heike-burch.jpg",
     description:
       "Teil 2: Heike Burch erzählt, warum sie keine Abenteurerin ist, wie das Leben im Camper funktioniert und warum Mut für sie nur im Rückblick existiert. Dazu: was ein gutes Leben im Alter ausmacht, ihr 40-Prozent-Spartrick und wie sie sichtbar bleibt.",
     guest: HEIKE_GUEST,
@@ -122,7 +122,7 @@ export const episodes: Episode[] = [
     date: "2026-10-14",
     duration: "55 Min",
     publishAt: "2026-10-14T15:15:00+02:00",
-    image: "/episoden/16-17-heike-burch.jpg",
+    image: "/episoden/16-heike-burch.jpg",
     description:
       "Heike Burch ist seit über 30 Jahren selbstständig und seit 2020 mit ihrem Mann im Camper unterwegs. Über ihren Weg von der Damenmassschneiderin in der DDR in die Mediengestaltung, warum Lebensqualität ihr Mass für Erfolg ist und wie der Tod eines Kollegen kurz vor der Pensionierung den Anstoss zur grossen Reise gab.",
     guest: HEIKE_GUEST,

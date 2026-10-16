@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const software = [
   {
     setup: "Solo-Selbständige, Einzelfirma ohne Personal",
-    wahl: "Banana Accounting, AbaNinja (Swiss21) oder schlanke Cloud-Tools",
+    wahl: "Banana Accounting, AbaNinja (Swiss21), MILKEE oder schlanke Cloud-Tools",
     warum: "Günstig bis gratis im Einstieg, einfache Buchhaltung, keine Lohnbuchhaltung nötig",
   },
   {
@@ -270,6 +270,16 @@ export default function BuchhaltungSelbstaendigeKmuPost() {
             gratis (bis 500 Rechnungen/Jahr), Basic ab CHF 21, Pro ab CHF 49 pro Monat, damit meist
             günstiger im Einstieg als bexio, dafür mit komplexerer Einrichtung (Kontenplan muss
             selbst angelegt werden).
+          </li>
+          <li className="list-disc">
+            <a href="https://milkee.ch/" target="_blank" rel="noopener noreferrer" className={linkClass}>
+              MILKEE
+            </a>{" "}
+            ist eine Schweizer Cloud-Buchhaltung für Selbständige und kleine KMU: Buchhaltung,
+            Rechnungsstellung und Zeiterfassung in einem Tool, wahlweise als einfache oder doppelte
+            Buchhaltung, inklusive Lohnbuchhaltung. Zum Ausprobieren gibt es 14 Tage gratis, ohne
+            Kreditkarte. Wir nutzen MILKEE auch selbst, und Gründer Nicolas Hämmerli hat uns bei
+            diesem Beitrag geholfen.
           </li>
           <li className="list-disc">
             Preislich liegt die Spanne 2026 zwischen kostenlosen Basisversionen und rund CHF
